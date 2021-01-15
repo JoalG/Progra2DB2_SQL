@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="67"
-  DTS:VersionGUID="{D2AA7E9D-1CDA-4073-BD97-69E70BB90943}">
+  DTS:VersionBuild="69"
+  DTS:VersionGUID="{0091E9FE-5CBC-461D-B3E9-E526D9907512}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -34,6 +34,17 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\joalg\OneDrive - Estudiantes ITCR\TEC\2020\2do Semestre\Bases de Datos 2\Proyecto\EXCEL_000-100.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel]"
+      DTS:CreationName="ZS-EXCEL"
+      DTS:DTSID="{3524406D-AC1C-4E2C-B603-E274573110E8}"
+      DTS:ObjectName="Excel">
+      <DTS:ObjectData>
+        <ConnectionManager
+          ConnectionString="Path=C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\201-300_para_XML.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;RetainSameConnection=False"
+          ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -207,12 +218,7 @@
       DTS:ObjectName="progradbtec.database.windows.net.progradb2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=progradbtec.database.windows.net;User ID=progradb2;Initial Catalog=progra2;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{D5D7498A-8653-466D-8EFE-BBF8715C8734}progradbtec.database.windows.net.progradb2;">
-          <DTS:Password
-            DTS:Name="Password"
-            Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAj2NQ1KV9XUCOUVmcE9n7NwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAlH9j94pitu07I9z2FeNzIhpvA4XtZeFZElMWYu9fzfgAAAAAOgAAAAAIAACAAAAAv//QrD5BUQk3nrWvXdOZBYOnvEpoZpFFETKyZGUYFryAAAABBMlvxDhd70t32kGqyXCiTDuG3o3Whr39dFQ3OoUiVQEAAAADtjX7kpOBtCcjrpwB9JtUBiYNesS+13hGUyyVIORZWFgz1RVUiMy8cd2VG1CTtE5yYJMvPHlrqfOyjwwiPnRgK</DTS:Password>
-        </DTS:ConnectionManager>
+          DTS:ConnectionString="Data Source=progradbtec.database.windows.net;User ID=progradb2;Initial Catalog=progra2;Provider=MSOLEDBSQL.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{D5D7498A-8653-466D-8EFE-BBF8715C8734}progradbtec.database.windows.net.progradb2;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -8155,23 +8161,2375 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{15787FA5-67D9-4FBE-8F42-F82764434C30}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Excel Source"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Excel Source; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="Excel Source can be used to read data from Excel files without installing any driver. It supports 32-bit and 64-bit both runtimes."
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="Sheet name or named range indicator from which you like to read data. You can use special table name indicators like [$first_sheet$] or [$1$], [$last_sheet$] or [$SomeNumber$]. For named range you can use NamedRange:NAME_FOR_RANGE"
+                  expressionType="Notify"
+                  name="TableName"
+                  typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack150.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">201-300</property>
+                <property
+                  dataType="System.Int32"
+                  description="AccessMode"
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="ZappySys.Common.Data.SqlDataAccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Query to read data. This option only used when AccessMode=Query"
+                  expressionType="Notify"
+                  name="Query"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum number of rows to fetch from source. 0=Unlimited"
+                  expressionType="Notify"
+                  name="MaxRows">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Output all columns as per excel formatting"
+                  expressionType="Notify"
+                  name="FormatAllColumns">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Total number of rows which needs to be skipped (After header)"
+                  expressionType="Notify"
+                  name="SkipRows">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Data has no header row to indicate column names"
+                  expressionType="Notify"
+                  name="Headerless">false</property>
+                <property
+                  dataType="System.String"
+                  description="List of column(s) which needs to be formatted according to excel format. Multiple columns must be separated by vertical bar (e.g. BirthDate|Amount|Age) "
+                  expressionType="Notify"
+                  name="FormattedColumns"></property>
+                <property
+                  dataType="System.String"
+                  description="Range start address for data read/write. Address must be excel cell address (e.g. A1)"
+                  expressionType="Notify"
+                  name="RangeStartCell"></property>
+                <property
+                  dataType="System.String"
+                  description="Range end address for data read/write. Address must be excel cell address (e.g. A1)"
+                  expressionType="Notify"
+                  name="RangeEndCell"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Metadata scan mode controls how data type and length is determined. By default few records scanned to determine datatype/length. Changing ScanMode affects length/datatype accuracy."
+                  expressionType="Notify"
+                  name="MetaDataScanMode"
+                  typeConverter="ZappySys.Common.Data.MetaDataScanMode">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Length for all string column. This option is only valid for MetaDataScanMode=Custom"
+                  expressionType="Notify"
+                  name="MetaDataCustomLength">1000</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.ExcelSource</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Excel Source.Connections[ZS-EXCEL]"
+                  connectionManagerID="Package.ConnectionManagers[Excel]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel]"
+                  description="Excel connection for this component"
+                  name="ZS-EXCEL" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput]"
+                  errorOrTruncationOperation="Error"
+                  errorRowDisposition="FailComponent"
+                  name="ExcelSourceOutput"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Factura]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Factura]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Factura]"
+                      name="Factura" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Año]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Año]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Año]"
+                      name="Año" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Mes]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Mes]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Dia]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Dia]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Dia]"
+                      name="Dia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[AñoVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]"
+                      name="AñoVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[MesVencimiento]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[MesVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[MesVencimiento]"
+                      name="MesVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[DiaVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]"
+                      name="DiaVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Producto]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Producto]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Producto]"
+                      name="Producto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cantidad]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cantidad]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cantidad]"
+                      name="Cantidad"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Moneda]"
+                      dataType="wstr"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Moneda]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Moneda]"
+                      name="Moneda" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Precio]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Precio]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Precio]"
+                      name="Precio"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Total]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Total]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Total]"
+                      name="Total"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Almacén]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Almacén]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Almacén]"
+                      name="Almacén" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Vendedor]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Vendedor]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Vendedor]"
+                      name="Vendedor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[TotalUSD]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[TotalUSD]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[TotalUSD]"
+                      name="TotalUSD"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Impuesto]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Impuesto]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Impuesto]"
+                      name="Impuesto"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[ImpuestoUSD]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]"
+                      name="ImpuestoUSD"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Tipo de cambio]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]"
+                      name="Tipo de cambio"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Ganacia]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Ganacia]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Ganacia]"
+                      name="Ganacia"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[GananciaUSD]"
+                      dataType="numeric"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[GananciaUSD]"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[GananciaUSD]"
+                      name="GananciaUSD"
+                      precision="19"
+                      scale="5" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Factura]"
+                      dataType="i4"
+                      name="Factura" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Año]"
+                      dataType="i4"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Mes]"
+                      dataType="i4"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Dia]"
+                      dataType="i4"
+                      name="Dia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[AñoVencimiento]"
+                      dataType="i4"
+                      name="AñoVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[MesVencimiento]"
+                      dataType="i4"
+                      name="MesVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[DiaVencimiento]"
+                      dataType="i4"
+                      name="DiaVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Producto]"
+                      dataType="i4"
+                      name="Producto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Cantidad]"
+                      dataType="numeric"
+                      name="Cantidad"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      name="Moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Precio]"
+                      dataType="numeric"
+                      name="Precio"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Total]"
+                      dataType="numeric"
+                      name="Total"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Almacén]"
+                      dataType="i4"
+                      name="Almacén" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Vendedor]"
+                      dataType="i4"
+                      name="Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[TotalUSD]"
+                      dataType="numeric"
+                      name="TotalUSD"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Impuesto]"
+                      dataType="numeric"
+                      name="Impuesto"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[ImpuestoUSD]"
+                      dataType="numeric"
+                      name="ImpuestoUSD"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Tipo de cambio]"
+                      dataType="numeric"
+                      name="Tipo de cambio"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[Ganacia]"
+                      dataType="numeric"
+                      name="Ganacia"
+                      precision="19"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].ExternalColumns[GananciaUSD]"
+                      dataType="numeric"
+                      name="GananciaUSD"
+                      precision="19"
+                      scale="5" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output]"
+                  isErrorOut="true"
+                  name="ExcelSource Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Factura]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Factura]"
+                      name="Factura" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Año]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Año]"
+                      name="Año" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Mes]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Dia]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Dia]"
+                      name="Dia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[AñoVencimiento]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[AñoVencimiento]"
+                      name="AñoVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[MesVencimiento]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[MesVencimiento]"
+                      name="MesVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[DiaVencimiento]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[DiaVencimiento]"
+                      name="DiaVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Producto]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Producto]"
+                      name="Producto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Cantidad]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Cantidad]"
+                      name="Cantidad"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Moneda]"
+                      name="Moneda" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Precio]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Precio]"
+                      name="Precio"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Total]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Total]"
+                      name="Total"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Almacén]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Almacén]"
+                      name="Almacén" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Vendedor]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Vendedor]"
+                      name="Vendedor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[TotalUSD]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[TotalUSD]"
+                      name="TotalUSD"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Impuesto]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Impuesto]"
+                      name="Impuesto"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ImpuestoUSD]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ImpuestoUSD]"
+                      name="ImpuestoUSD"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Tipo de cambio]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Tipo de cambio]"
+                      name="Tipo de cambio"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Ganacia]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[Ganacia]"
+                      name="Ganacia"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[GananciaUSD]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[GananciaUSD]"
+                      name="GananciaUSD"
+                      precision="19"
+                      scale="5" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                      codePage="1252"
+                      dataType="str"
+                      length="128"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                      name="ErrorColumnName" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                      dataType="wstr"
+                      length="1024"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                      name="ErrorMessage" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Origen XML"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML.;Microsoft Corporation;Microsoft SQL Server; Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Extrae datos de un archivo XML. Por ejemplo, se usa para extraer los datos de catálogo de un archivo XML que representa catálogos y elementos de catálogo. Antes de usar la tarea, se debe especificar el esquema y generar una salida para cada elemento XML."
+              name="Origen XML"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.XmlSourceAdapter</property>
+                <property
+                  dataType="System.String"
+                  description="Datos XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLData">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\KK.xml</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que usa el adaptador de origen XML para especificar datos XML."
+                  name="XMLDataVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo obtiene el adaptador de origen XML los datos XML."
+                  name="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Definición de esquema XML que usa el adaptador de origen XML."
+                  expressionType="Notify"
+                  name="XMLSchemaDefinition">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\KK.xsd</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Identifica si se usará el esquema insertado."
+                  name="UseInlineSchema">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Define cómo se asignan los tipos de enteros XML."
+                  name="XMLIntegerMapping"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.XmlSourceAdapter+XMLIntegerMappingConverter">0</property>
+              </properties>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Origen XML.Outputs[Row]"
+                  name="Row">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">Row</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Factura]"
+                      dataType="ui4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Factura]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Factura]"
+                      name="Factura"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Año]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Año]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Año]"
+                      name="Año"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Mes]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Mes]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Mes]"
+                      name="Mes"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Dia]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Dia]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Dia]"
+                      name="Dia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[AñoVencimiento]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[AñoVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[AñoVencimiento]"
+                      name="AñoVencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[MesVencimiento]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[MesVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[MesVencimiento]"
+                      name="MesVencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[DiaVencimiento]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[DiaVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[DiaVencimiento]"
+                      name="DiaVencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cliente]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Cliente]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cliente]"
+                      name="Cliente"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Producto]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Producto]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Producto]"
+                      name="Producto"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cantidad]"
+                      dataType="ui2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Cantidad]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cantidad]"
+                      name="Cantidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Moneda]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Moneda]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Moneda]"
+                      name="Moneda"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Precio]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Precio]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Precio]"
+                      name="Precio"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Total]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Total]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Total]"
+                      name="Total"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Almacén]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Almacén]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Almacén]"
+                      name="Almacén"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Vendedor]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Vendedor]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Vendedor]"
+                      name="Vendedor"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TotalUSD]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[TotalUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TotalUSD]"
+                      name="TotalUSD"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Impuesto]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Impuesto]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Impuesto]"
+                      name="Impuesto"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[ImpuestoUSD]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[ImpuestoUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[ImpuestoUSD]"
+                      name="ImpuestoUSD"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TipodeCambio]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[TipodeCambio]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TipodeCambio]"
+                      name="TipodeCambio"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Ganacia]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Ganacia]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Ganacia]"
+                      name="Ganacia"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[GananciaUSD]"
+                      dataType="decimal"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[GananciaUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[GananciaUSD]"
+                      name="GananciaUSD"
+                      scale="10"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Factura]"
+                      dataType="ui4"
+                      name="Factura">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt32</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Año]"
+                      dataType="ui2"
+                      name="Año">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Mes]"
+                      dataType="ui1"
+                      name="Mes">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Dia]"
+                      dataType="ui1"
+                      name="Dia">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[AñoVencimiento]"
+                      dataType="ui2"
+                      name="AñoVencimiento">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[MesVencimiento]"
+                      dataType="ui1"
+                      name="MesVencimiento">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[DiaVencimiento]"
+                      dataType="ui1"
+                      name="DiaVencimiento">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      name="Cliente">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Producto]"
+                      dataType="ui2"
+                      name="Producto">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Cantidad]"
+                      dataType="ui2"
+                      name="Cantidad">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.UInt16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      name="Moneda">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.String</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Precio]"
+                      dataType="decimal"
+                      name="Precio"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Total]"
+                      dataType="decimal"
+                      name="Total"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Almacén]"
+                      dataType="ui1"
+                      name="Almacén">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Byte</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Vendedor]"
+                      dataType="i2"
+                      name="Vendedor">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Int16</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[TotalUSD]"
+                      dataType="decimal"
+                      name="TotalUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Impuesto]"
+                      dataType="decimal"
+                      name="Impuesto"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[ImpuestoUSD]"
+                      dataType="decimal"
+                      name="ImpuestoUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[TipodeCambio]"
+                      dataType="decimal"
+                      name="TipodeCambio"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[Ganacia]"
+                      dataType="decimal"
+                      name="Ganacia"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Row].ExternalColumns[GananciaUSD]"
+                      dataType="decimal"
+                      name="GananciaUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          name="CLRType">System.Decimal</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row]"
+                  isErrorOut="true"
+                  name="Salida de error de Row">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Identifica el conjunto de filas asociado a la salida."
+                      name="RowsetID">Row</property>
+                  </properties>
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Factura]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Factura]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Factura]"
+                      name="Factura" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Año]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Año]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Año]"
+                      name="Año" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Mes]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Mes]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Mes]"
+                      name="Mes" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Dia]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Dia]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Dia]"
+                      name="Dia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[AñoVencimiento]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[AñoVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[AñoVencimiento]"
+                      name="AñoVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[MesVencimiento]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[MesVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[MesVencimiento]"
+                      name="MesVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[DiaVencimiento]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[DiaVencimiento]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[DiaVencimiento]"
+                      name="DiaVencimiento" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Cliente]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Cliente]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Cliente]"
+                      name="Cliente" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Producto]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Producto]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Producto]"
+                      name="Producto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Cantidad]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Cantidad]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Cantidad]"
+                      name="Cantidad" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Moneda]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Moneda]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Moneda]"
+                      name="Moneda" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Precio]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Precio]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Precio]"
+                      name="Precio" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Total]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Total]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Total]"
+                      name="Total" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Almacén]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Almacén]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Almacén]"
+                      name="Almacén" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Vendedor]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Vendedor]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Vendedor]"
+                      name="Vendedor" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[TotalUSD]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[TotalUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[TotalUSD]"
+                      name="TotalUSD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Impuesto]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Impuesto]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Impuesto]"
+                      name="Impuesto" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ImpuestoUSD]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[ImpuestoUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ImpuestoUSD]"
+                      name="ImpuestoUSD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[TipodeCambio]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[TipodeCambio]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[TipodeCambio]"
+                      name="TipodeCambio" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Ganacia]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Ganacia]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[Ganacia]"
+                      name="Ganacia" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[GananciaUSD]"
+                      dataType="nText"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[GananciaUSD]"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[GananciaUSD]"
+                      name="GananciaUSD" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Factura]"
+                      dataType="nText"
+                      name="Factura" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Año]"
+                      dataType="nText"
+                      name="Año" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Mes]"
+                      dataType="nText"
+                      name="Mes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Dia]"
+                      dataType="nText"
+                      name="Dia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[AñoVencimiento]"
+                      dataType="nText"
+                      name="AñoVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[MesVencimiento]"
+                      dataType="nText"
+                      name="MesVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[DiaVencimiento]"
+                      dataType="nText"
+                      name="DiaVencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Cliente]"
+                      dataType="nText"
+                      name="Cliente" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Producto]"
+                      dataType="nText"
+                      name="Producto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Cantidad]"
+                      dataType="nText"
+                      name="Cantidad" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Moneda]"
+                      dataType="nText"
+                      name="Moneda" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Precio]"
+                      dataType="nText"
+                      name="Precio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Total]"
+                      dataType="nText"
+                      name="Total" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Almacén]"
+                      dataType="nText"
+                      name="Almacén" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Vendedor]"
+                      dataType="nText"
+                      name="Vendedor" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[TotalUSD]"
+                      dataType="nText"
+                      name="TotalUSD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Impuesto]"
+                      dataType="nText"
+                      name="Impuesto" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[ImpuestoUSD]"
+                      dataType="nText"
+                      name="ImpuestoUSD" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[TipodeCambio]"
+                      dataType="nText"
+                      name="TipodeCambio" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[Ganacia]"
+                      dataType="nText"
+                      name="Ganacia" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Origen XML.Outputs[Salida de error de Row].ExternalColumns[GananciaUSD]"
+                      dataType="nText"
+                      name="GananciaUSD" />
+                  </externalMetadataColumns>
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Factura]"
+                      cachedDataType="ui4"
+                      cachedName="Factura"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Factura]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Año]"
+                      cachedDataType="ui2"
+                      cachedName="Año"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Año]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Mes]"
+                      cachedDataType="ui1"
+                      cachedName="Mes"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Mes]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Dia]"
+                      cachedDataType="ui1"
+                      cachedName="Dia"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Dia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[AñoVencimiento]"
+                      cachedDataType="ui2"
+                      cachedName="AñoVencimiento"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[AñoVencimiento]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[MesVencimiento]"
+                      cachedDataType="ui1"
+                      cachedName="MesVencimiento"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[MesVencimiento]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[DiaVencimiento]"
+                      cachedDataType="ui1"
+                      cachedName="DiaVencimiento"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[DiaVencimiento]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Cliente"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Producto]"
+                      cachedDataType="ui2"
+                      cachedName="Producto"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Producto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Cantidad]"
+                      cachedDataType="ui2"
+                      cachedName="Cantidad"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cantidad]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Moneda]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Moneda"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Moneda]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Precio]"
+                      cachedDataType="decimal"
+                      cachedName="Precio"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Precio]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Total]"
+                      cachedDataType="decimal"
+                      cachedName="Total"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Total]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Almacén]"
+                      cachedDataType="ui1"
+                      cachedName="Almacén"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Almacén]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Vendedor]"
+                      cachedDataType="i2"
+                      cachedName="Vendedor"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Vendedor]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[TotalUSD]"
+                      cachedDataType="decimal"
+                      cachedName="TotalUSD"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TotalUSD]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Impuesto]"
+                      cachedDataType="decimal"
+                      cachedName="Impuesto"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Impuesto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[ImpuestoUSD]"
+                      cachedDataType="decimal"
+                      cachedName="ImpuestoUSD"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[ImpuestoUSD]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[TipodeCambio]"
+                      cachedDataType="decimal"
+                      cachedName="TipodeCambio"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TipodeCambio]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[Ganacia]"
+                      cachedDataType="decimal"
+                      cachedName="Ganacia"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Ganacia]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Sort.Inputs[Sort Input].Columns[GananciaUSD]"
+                      cachedDataType="decimal"
+                      cachedName="GananciaUSD"
+                      cachedScale="10"
+                      lineageId="Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[GananciaUSD]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Factura]"
+                      dataType="ui4"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Factura]"
+                      name="Factura"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Factura]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Año]"
+                      dataType="ui2"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Año]"
+                      name="Año">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Año]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Mes]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Mes]"
+                      name="Mes">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Mes]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Dia]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Dia]"
+                      name="Dia">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Dia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[AñoVencimiento]"
+                      dataType="ui2"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[AñoVencimiento]"
+                      name="AñoVencimiento">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[AñoVencimiento]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[MesVencimiento]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[MesVencimiento]"
+                      name="MesVencimiento">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[MesVencimiento]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[DiaVencimiento]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[DiaVencimiento]"
+                      name="DiaVencimiento">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[DiaVencimiento]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Cliente]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Cliente]"
+                      name="Cliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Producto]"
+                      dataType="ui2"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Producto]"
+                      name="Producto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Producto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Cantidad]"
+                      dataType="ui2"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Cantidad]"
+                      name="Cantidad">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Cantidad]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Moneda]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Moneda]"
+                      name="Moneda">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Moneda]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Precio]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Precio]"
+                      name="Precio"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Precio]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Total]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Total]"
+                      name="Total"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Total]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Almacén]"
+                      dataType="ui1"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Almacén]"
+                      name="Almacén">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Almacén]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Vendedor]"
+                      dataType="i2"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Vendedor]"
+                      name="Vendedor">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Vendedor]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[TotalUSD]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[TotalUSD]"
+                      name="TotalUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TotalUSD]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Impuesto]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Impuesto]"
+                      name="Impuesto"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Impuesto]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[ImpuestoUSD]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[ImpuestoUSD]"
+                      name="ImpuestoUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[ImpuestoUSD]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[TipodeCambio]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[TipodeCambio]"
+                      name="TipodeCambio"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[TipodeCambio]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Ganacia]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[Ganacia]"
+                      name="Ganacia"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[Ganacia]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[GananciaUSD]"
+                      dataType="decimal"
+                      lineageId="Package\Data Flow Task 1\Sort.Outputs[Sort Output].Columns[GananciaUSD]"
+                      name="GananciaUSD"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Data Flow Task 1\Origen XML.Outputs[Row].Columns[GananciaUSD]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Trash Destination"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Trash Destination; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="The trash destination is used to create dummy destination which ends data path without any processing."
+              name="Trash Destination"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.String"
+                  description="File path where you want to save data"
+                  expressionType="Notify"
+                  name="FilePath">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\KK2.xml</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates if you want to save input data to comma separated text file"
+                  expressionType="Notify"
+                  name="SaveDataToFile">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Append data to file"
+                  expressionType="Notify"
+                  name="Append">false</property>
+                <property
+                  dataType="System.String"
+                  description="RowSeparator"
+                  expressionType="Notify"
+                  name="RowSeparator">{NEWLINE}</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether you want to overwrite target file if exists"
+                  expressionType="Notify"
+                  name="OverwriteFileIfExists">true</property>
+                <property
+                  dataType="System.String"
+                  description="ColumnSeparator"
+                  expressionType="Notify"
+                  name="ColumnSeparator">,</property>
+                <property
+                  dataType="System.Boolean"
+                  description="SupportUnicode"
+                  expressionType="Notify"
+                  name="SupportUnicode">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="ColumnNamesInFirstRow"
+                  expressionType="Notify"
+                  name="ColumnNamesInFirstRow">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="QuoteDataIfNeeded"
+                  expressionType="Notify"
+                  name="QuoteDataIfNeeded">false</property>
+                <property
+                  dataType="System.String"
+                  description="Date time format string for any column with DT_DBDATETIME, DT_DBDATETIME2 or DB_DATE format"
+                  expressionType="Notify"
+                  name="DateTimeFormat">yyyy-MM-dd HH:mm:ss</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.TrashDestination</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Trash Destination.Inputs[TrashDestinationInput]"
+                  hasSideEffects="true"
+                  name="TrashDestinationInput">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Trash Destination.Inputs[TrashDestinationInput].Columns[ZS_XML_OUT]"
+                      cachedDataType="nText"
+                      cachedName="ZS_XML_OUT"
+                      lineageId="Package\Data Flow Task 1\XML Generator Transform.Outputs[XmlGeneratorTransformOutput].Columns[ZS_XML_OUT]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\XML Generator Transform"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="XML Generator Transform; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+              description="The XML generator transform can be used to create XML document from single or multiple inputs. You can create simple or nested XML document."
+              name="XML Generator Transform"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                  expressionType="Notify"
+                  name="LoggingMode"
+                  typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="When you enable this property it will prefix timestamp before Log messages."
+                  expressionType="Notify"
+                  name="PrefixTimestamp">false</property>
+                <property
+                  dataType="System.Null"
+                  expressionType="Notify"
+                  name="SelfRef"
+                  typeConverter="NOTBROWSABLE" />
+                <property
+                  dataType="System.Int32"
+                  description="Determines XML format and output mode (e.g. one XML for all input rows or one XML for each input row)"
+                  expressionType="Notify"
+                  name="OutputMode"
+                  typeConverter="ZappySys.PowerPack.Transform.XmlGeneratorTransform.XmlOutputMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Defines shape of output XML string"
+                  expressionType="Notify"
+                  name="LayoutInfo">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;settings ver="3" format="Xml"&gt;
+  &lt;dataset id="dsFac194" main="True" rowelement="Row" inputid="194" readfrominput="True"&gt;&lt;/dataset&gt;
+  &lt;map src="Factura" name="Factura" maptype="Element" /&gt;
+  &lt;map src="Año" name="Año" maptype="Element" /&gt;
+  &lt;map src="Mes" name="Mes" maptype="Element" /&gt;
+  &lt;map src="Dia" name="Dia" maptype="Element" /&gt;
+  &lt;map src="AñoVencimiento" name="AñoVencimiento" maptype="Element" /&gt;
+  &lt;map src="MesVencimiento" name="MesVencimiento" maptype="Element" /&gt;
+  &lt;map src="DiaVencimiento" name="DiaVencimiento" maptype="Element" /&gt;
+  &lt;map src="Cliente" name="Cliente" maptype="Element" /&gt;
+  &lt;map src="Producto" name="Producto" maptype="Element" /&gt;
+  &lt;map src="Cantidad" name="Cantidad" maptype="Element" /&gt;
+  &lt;map src="Moneda" name="Moneda" maptype="Element" /&gt;
+  &lt;map src="Precio" name="Precio" maptype="Element" /&gt;
+  &lt;map src="Total" name="Total" maptype="Element" /&gt;
+  &lt;map src="Almacén" name="Almacén" maptype="Element" /&gt;
+  &lt;map src="Vendedor" name="Vendedor" maptype="Element" /&gt;
+  &lt;map src="TotalUSD" name="TotalUSD" maptype="Element" /&gt;
+  &lt;map src="Impuesto" name="Impuesto" maptype="Element" /&gt;
+  &lt;map src="ImpuestoUSD" name="ImpuestoUSD" maptype="Element" /&gt;
+  &lt;map src="Tipo de cambio" name="TipodeCambio" maptype="Element" /&gt;
+  &lt;map src="Ganacia" name="Ganacia" maptype="Element" /&gt;
+  &lt;map src="GananciaUSD" name="GananciaUSD" maptype="Element" /&gt;
+&lt;/settings&gt;</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Do not output attribute/element if value is NULL. By default null attribute is output as &lt;Phone xsi:nil=&quot;true&quot; /&gt;"
+                  expressionType="Notify"
+                  name="DoNotOutputNullAttribute">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Set this option to True if you dont want to output empty nodes of sub document (e.g nested property). This option is only applicable if you enabled DoNotOutputNullProperty. If all child peoprties are NULL for parent node then by default output contains empty nodes (e.g. CountryInfo: { CityInfo: { } } for Json --OR-- &lt;CountryInfo&gt;&lt;CityInfo /&gt;&lt;/CountryInfo&gt; for Xml). You can enable this option to avoid such empty nodes from the output."
+                  expressionType="Notify"
+                  name="DoNotOutputEmptyNestedAttribute">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indent XML Text generated by this transform (Pretty Print)"
+                  expressionType="Notify"
+                  name="IndentOutput">false</property>
+                <property
+                  dataType="System.String"
+                  description="Default output format for datetime columns"
+                  expressionType="Notify"
+                  name="DateTimeFormat">yyyy-MM-dd HH:mm:ss</property>
+                <property
+                  dataType="System.String"
+                  description="Culture setting for this task. This option is useful to control output format for certain data types (e.g. number, decimal) based on regional settings. In USA dot is used for decimal indicator but in Germany it may be comma. Leave this blank if you want to use system default settings."
+                  expressionType="Notify"
+                  name="Culture">none</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Document Header/Footer text come from upstream column rather than direct string"
+                  expressionType="Notify"
+                  name="UseColumnForHeaderFooter">false</property>
+                <property
+                  dataType="System.String"
+                  description="Header text for document (Added before each document in the output)"
+                  expressionType="Notify"
+                  name="DocumentHeader"></property>
+                <property
+                  dataType="System.String"
+                  description="Footer text for document (Added after each document in the output)"
+                  expressionType="Notify"
+                  name="DocumentFooter"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how many rows to include in each batch (Array records for single dataset array mode). 0=Include all in one batch. This setting is only valid for Mode=[Single Dataset Array]"
+                  expressionType="Notify"
+                  name="ArrayBatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies encoding for data. If you set CharacterSet property then Encoing is ignored."
+                  expressionType="Notify"
+                  name="Encoding"
+                  typeConverter="ZappySys.Common.EncodingType">2</property>
+                <property
+                  dataType="System.String"
+                  description="Character set name (i.e. ISO-8859-1) or code page number. If you set this property then Encoding property will be ignored. To output without BOM set this property to blank and use Encoding instead."
+                  expressionType="Notify"
+                  name="CharacterSet"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Controls weather you need to output XML declaration node (e.g. &lt;?xml version=&quot;1.0&quot; ?&gt;)"
+                  expressionType="Notify"
+                  name="DoNotOutputXmlDeclaration">false</property>
+                <property
+                  dataType="System.String"
+                  description="Standalone attribute for XML declaration (Leave blank to exclude this attribute). This attribute is usually used when you have DTD validation in XML which is not very common."
+                  expressionType="Notify"
+                  name="XmlStandAlone"></property>
+                <property
+                  dataType="System.String"
+                  description="XML NameDo not output attribute/element if value is NULL. By default null attribute is output as &lt;Phone xsi:nil=&quot;true&quot; /&gt;"
+                  expressionType="Notify"
+                  name="Namespaces"></property>
+                <property
+                  dataType="System.String"
+                  description="Document root node (First node after XML declaration)"
+                  expressionType="Notify"
+                  name="RootElementName">Root</property>
+                <property
+                  dataType="System.String"
+                  description="Prefix for Root element (e.g. enter ns1 if you want your root element as &lt;ns1:Root&gt;"
+                  expressionType="Notify"
+                  name="RootElementPrefix"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Ignore static attribute from nested element check when [Do not output empty nested elements] is checked"
+                  expressionType="Notify"
+                  name="IgnoreStaticAttributeForEmptyNestedPropertyCheck">false</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">ZappySys.XmlGeneratorTransform</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1]"
+                  name="XmlInput1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="Id for attached dataset with input. Use XML Layout Editor to see attached dataset"
+                      expressionType="Notify"
+                      name="DatasetInputId">194</property>
+                  </properties>
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Factura]"
+                      cachedDataType="i4"
+                      cachedName="Factura"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Factura]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Año]"
+                      cachedDataType="i4"
+                      cachedName="Año"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Año]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Mes]"
+                      cachedDataType="i4"
+                      cachedName="Mes"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Mes]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Dia]"
+                      cachedDataType="i4"
+                      cachedName="Dia"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Dia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[AñoVencimiento]"
+                      cachedDataType="i4"
+                      cachedName="AñoVencimiento"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[MesVencimiento]"
+                      cachedDataType="i4"
+                      cachedName="MesVencimiento"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[MesVencimiento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[DiaVencimiento]"
+                      cachedDataType="i4"
+                      cachedName="DiaVencimiento"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Cliente]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Cliente"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cliente]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Producto]"
+                      cachedDataType="i4"
+                      cachedName="Producto"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Producto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Cantidad]"
+                      cachedDataType="numeric"
+                      cachedName="Cantidad"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Cantidad]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Moneda]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Moneda"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Moneda]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Precio]"
+                      cachedDataType="numeric"
+                      cachedName="Precio"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Precio]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Total]"
+                      cachedDataType="numeric"
+                      cachedName="Total"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Total]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Almacén]"
+                      cachedDataType="i4"
+                      cachedName="Almacén"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Almacén]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Vendedor]"
+                      cachedDataType="i4"
+                      cachedName="Vendedor"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Vendedor]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[TotalUSD]"
+                      cachedDataType="numeric"
+                      cachedName="TotalUSD"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[TotalUSD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Impuesto]"
+                      cachedDataType="numeric"
+                      cachedName="Impuesto"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Impuesto]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[ImpuestoUSD]"
+                      cachedDataType="numeric"
+                      cachedName="ImpuestoUSD"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Tipo de cambio]"
+                      cachedDataType="numeric"
+                      cachedName="Tipo de cambio"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[Ganacia]"
+                      cachedDataType="numeric"
+                      cachedName="Ganacia"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[Ganacia]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1].Columns[GananciaUSD]"
+                      cachedDataType="numeric"
+                      cachedName="GananciaUSD"
+                      cachedPrecision="19"
+                      cachedScale="5"
+                      lineageId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput].Columns[GananciaUSD]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput2]"
+                  name="XmlInput2">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\XML Generator Transform.Outputs[XmlGeneratorTransformOutput]"
+                  errorOrTruncationOperation="Error"
+                  name="XmlGeneratorTransformOutput">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\XML Generator Transform.Outputs[XmlGeneratorTransformOutput].Columns[ZS_XML_OUT]"
+                      dataType="nText"
+                      description="This output column contains generated XML string from XML Generator Transform"
+                      lineageId="Package\Data Flow Task 1\XML Generator Transform.Outputs[XmlGeneratorTransformOutput].Columns[ZS_XML_OUT]"
+                      name="ZS_XML_OUT" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[ExcelSourceOutput]"
+              endId="Package\Data Flow Task 1\XML Generator Transform.Inputs[XmlInput1]"
+              name="ExcelSourceOutput"
+              startId="Package\Data Flow Task 1\Excel Source.Outputs[ExcelSourceOutput]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[Row]"
+              endId="Package\Data Flow Task 1\Sort.Inputs[Sort Input]"
+              name="Row"
+              startId="Package\Data Flow Task 1\Origen XML.Outputs[Row]" />
+            <path
+              refId="Package\Data Flow Task 1.Paths[XmlGeneratorTransformOutput]"
+              endId="Package\Data Flow Task 1\Trash Destination.Inputs[TrashDestinationInput]"
+              name="XmlGeneratorTransformOutput"
+              startId="Package\Data Flow Task 1\XML Generator Transform.Outputs[XmlGeneratorTransformOutput]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
-<!--If you manually edit this section and make a mistake, you can delete it. -->
-<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
 <Objects
   Version="8">
-  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Data Flow Task"
           TopLeft="158.571431271884,82.5882364523865" />
+        <NodeLayout
+          Size="161.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task 1"
+          TopLeft="421.249993722886,109.199998047352" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8179,71 +10537,299 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Data Flow Task\Data Conversion BigInts txt"
-          TopLeft="145.000002469335,346.411769564177" />
-        <NodeLayout
-          Size="188,41.6"
-          Id="Package\Data Flow Task\Formatear Decimals txt"
-          TopLeft="156.428574092534,453.458826489432" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="175.35714640225,52.9558829919329" />
-        <NodeLayout
-          Size="212.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion Fechas xslx"
-          TopLeft="467.470240055388,244.136291222724" />
-        <NodeLayout
-          Size="106.4,41.6"
-          Id="Package\Data Flow Task\Sort 1"
-          TopLeft="523.988097063107,743.428441903504" />
-        <NodeLayout
-          Size="212.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion BigInts xslx"
-          TopLeft="471.577382782906,345.268642575101" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Data Flow Task\Formatear Fechas txt"
-          TopLeft="164.375002978902,156.114708092542" />
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\Data Flow Task\Formatear Fechas xslx"
-          TopLeft="474.642852054414,153.744115385874" />
-        <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\Data Flow Task\Formatear Decimals xslx"
-          TopLeft="480.059525285576,453.198053517115" />
-        <NodeLayout
-          Size="207.2,41.6"
-          Id="Package\Data Flow Task\Data Conversion Fechas txt"
-          TopLeft="143.571431016436,246.235297571004" />
-        <NodeLayout
-          Size="221.6,41.6"
-          Id="Package\Data Flow Task\Data Conversion Decimals xslx"
-          TopLeft="469.166668875233,549.81864039068" />
-        <NodeLayout
-          Size="139.2,42.4"
-          Id="Package\Data Flow Task\Excel Source"
-          TopLeft="494.880953909843,50.7039406912428" />
-        <NodeLayout
-          Size="186.4,41.6"
+          Size="186.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\OLE DB Destination txt"
           TopLeft="160.625002715471,827.482358704207" />
         <NodeLayout
-          Size="208,41.6"
+          Size="208,41.3333333333334"
           Id="Package\Data Flow Task\Data Conversion String xslx"
           TopLeft="473.363097338513,644.298050514759" />
         <NodeLayout
-          Size="191.2,41.6"
+          Size="178.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Formatear Fechas txt"
+          TopLeft="164.375002978902,156.114708092542" />
+        <NodeLayout
+          Size="188,41.3333333333334"
+          Id="Package\Data Flow Task\Formatear Decimals txt"
+          TopLeft="156.428574092534,453.458826489432" />
+        <NodeLayout
+          Size="212.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion BigInts xslx"
+          TopLeft="471.577382782906,345.268642575101" />
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="494.880953909843,50.7039406912428" />
+        <NodeLayout
+          Size="97.3333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Sort"
+          TopLeft="205.48571759438,735.70588851965" />
+        <NodeLayout
+          Size="212.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion Fechas xslx"
+          TopLeft="467.470240055388,244.136291222724" />
+        <NodeLayout
+          Size="184,41.3333333333334"
+          Id="Package\Data Flow Task\Formatear Fechas xslx"
+          TopLeft="474.642852054414,153.744115385874" />
+        <NodeLayout
+          Size="106.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Sort 1"
+          TopLeft="523.988097063107,743.428441903504" />
+        <NodeLayout
+          Size="216.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion Decimals txt"
+          TopLeft="149.285716828034,553.423534570352" />
+        <NodeLayout
+          Size="152.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="185.485717253782,643.694120414034" />
+        <NodeLayout
+          Size="191.333333333334,41.3333333333334"
           Id="Package\Data Flow Task\OLE DB Destination xslx"
           TopLeft="476.755954499237,827.939224126059" />
         <NodeLayout
-          Size="216.8,41.6"
-          Id="Package\Data Flow Task\Data Conversion Decimals txt"
-          TopLeft="149.285716828034,553.423534570352" />
+          Size="207.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion Fechas txt"
+          TopLeft="143.571431016436,246.235297571004" />
+        <NodeLayout
+          Size="221.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion Decimals xslx"
+          TopLeft="469.166668875233,549.81864039068" />
+        <NodeLayout
+          Size="192.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Formatear Decimals xslx"
+          TopLeft="480.059525285576,453.198053517115" />
+        <NodeLayout
+          Size="207.333333333334,41.3333333333334"
+          Id="Package\Data Flow Task\Data Conversion BigInts txt"
+          TopLeft="145.000002469335,346.411769564177" />
+        <NodeLayout
+          Size="150.666666666667,41.3333333333334"
+          Id="Package\Data Flow Task\Flat File Source"
+          TopLeft="175.35714640225,52.9558829919329" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output1]"
+          TopLeft="254.055360154926,777.30588851965">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.1764701845569"
+              Start="0,0"
+              End="0,42.6764701845569">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.6764701845569" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Sort Output]"
+          TopLeft="574.772025781172,785.028441903504">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.9107822225551"
+              Start="0,0"
+              End="0,35.4107822225551">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.4107822225551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Salida 0]"
+          TopLeft="570.256546054901,195.344115385874">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.7921758368504"
+              Start="0,0"
+              End="0,41.2921758368504">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.2921758368504" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 01]"
+          TopLeft="254.057145460284,495.058826489432">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.3647080809196"
+              Start="0,0"
+              End="0,50.8647080809196">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,50.8647080809196" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Output 0]"
+          TopLeft="250.373216997669,197.714708092542">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.520589478462"
+              Start="0,0"
+              End="0,41.020589478462">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.020589478462" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="252.066074690576,94.5558829919329">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,61.5588251006091"
+              Start="0,0"
+              End="0,54.0588251006091">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54.0588251006091" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="565.561902982128,93.1039406912429">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.6401746946312"
+              Start="0,0"
+              End="0,53.1401746946312">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.1401746946312" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="258.085717424081,685.294120414034">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.4117681056159"
+              Start="0,0"
+              End="0,42.9117681056159">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.9117681056159" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="578.213097080404,494.798053517115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55.0205868735648"
+              Start="0,0"
+              End="0,47.5205868735648">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5205868735648" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
+          TopLeft="259.785717040908,595.023534570352">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.6705858436826"
+              Start="0,0"
+              End="0,41.1705858436826">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.1705858436826" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Data Conversion Output5]"
           TopLeft="577.27559720081,685.898050514759">
@@ -8376,236 +10962,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output]"
-          TopLeft="574.772025781172,785.028441903504">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.9107822225551"
-              Start="0,0"
-              End="0,35.4107822225551">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.4107822225551" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Salida 0]"
-          TopLeft="570.256546054901,195.344115385874">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.7921758368504"
-              Start="0,0"
-              End="0,41.2921758368504">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.2921758368504" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 01]"
-          TopLeft="254.057145460284,495.058826489432">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.3647080809196"
-              Start="0,0"
-              End="0,50.8647080809196">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.8647080809196" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,17.4323540404598,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Output 0]"
-          TopLeft="250.373216997669,197.714708092542">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.520589478462"
-              Start="0,0"
-              End="0,41.020589478462">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.020589478462" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="252.066074690576,94.5558829919329">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,61.5588251006091"
-              Start="0,0"
-              End="0,54.0588251006091">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,54.0588251006091" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="565.561902982128,93.1039406912429">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.6401746946312"
-              Start="0,0"
-              End="0,53.1401746946312">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,53.1401746946312" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="578.213097080404,494.798053517115">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,55.0205868735648"
-              Start="0,0"
-              End="0,47.5205868735648">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,47.5205868735648" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="185.485717253782,643.694120414034" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output6]"
-          TopLeft="259.785717040908,595.023534570352">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.6705858436826"
-              Start="0,0"
-              End="0,41.1705858436826">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.1705858436826" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Data Flow Task\Sort"
-          TopLeft="205.48571759438,735.70588851965" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="258.085717424081,685.294120414034">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.4117681056159"
-              Start="0,0"
-              End="0,42.9117681056159">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.9117681056159" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Sort Output1]"
-          TopLeft="254.055360154926,777.30588851965">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.1764701845569"
-              Start="0,0"
-              End="0,42.6764701845569">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.6764701845569" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -8635,5 +10991,99 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Data Flow Task 1">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task 1\Excel Source"
+          TopLeft="84.3749996367841,63.2499999418854" />
+        <NodeLayout
+          Size="201.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task 1\XML Generator Transform"
+          TopLeft="356.874995576218,60.6499999883771" />
+        <NodeLayout
+          Size="134,42.6666666666667"
+          Id="Package\Data Flow Task 1\Origen XML"
+          TopLeft="60,150.999998372793" />
+        <NodeLayout
+          Size="98.6666666666667,42.6666666666667"
+          Id="Package\Data Flow Task 1\Sort"
+          TopLeft="318.749996144325,158.799998233318" />
+        <NodeLayout
+          Size="162.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task 1\Trash Destination"
+          TopLeft="639.999991357327,60" />
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[ExcelSourceOutput]"
+          TopLeft="223.708332970117,83.2833332984646">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="133.1666626061,0"
+              Start="0,0"
+              End="125.6666626061,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="125.6666626061,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[Row]"
+          TopLeft="194,176.233331636389">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.749996144325,0"
+              Start="0,0"
+              End="117.249996144325,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="117.249996144325,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task 1.Paths[XmlGeneratorTransformOutput]"
+          TopLeft="558.208328909551,81.6583333275219">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="81.7916624477756,0"
+              Start="0,0"
+              End="74.2916624477756,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.2916624477756,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
