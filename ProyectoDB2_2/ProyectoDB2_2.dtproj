@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MSI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAACAAAAAAAQZgAAAAEAACAAAABMI7DWXYFSsZkAIXo7uE0xG6x/LNywYjU3emQrDNTe0AAAAAAOgAAAAAIAACAAAADd452a/uVmGHMme4oMVOpoceXZQJnHAIbiz4dgcnKR+ZAAAAAMVNNe0jItlLZ8S/PByjaSqCwR50m+Q+2njDBsGSLqDBQjpDj9mZe5RGHtxptmR7loCH81E01mDZpZ6BCQ+ManstVqs0126033z8uIXwCXeqlSw4F8oXlPZaDIkI/E1A0c6cJapb6LGUcAu8OaqhsIAlKre3qux8XqmwPygfOBNpdrSibD/1ptkIVNSEDdyQdAAAAAl/rPam8kJmge+k0/bStkCOBZuLs/w5OwpUydf4hVMf+rxRQ2VX6Xt335ZyFywiPwDg9xdnvJbDMiYmnVw/LDBg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAj2NQ1KV9XUCOUVmcE9n7NwAAAAACAAAAAAAQZgAAAAEAACAAAAD+68w59zvpJddsr4n6eSxXlAha780xTa0izwlntvLHxQAAAAAOgAAAAAIAACAAAADhqzcebXxflnjekqGmScOqi7s2hGo1BxlEg6bUjz2vBZAAAACWkVzSqmePEyO+7SVyIegezFkfALIgJzjcIbNFgd/Dh+66O0tbIFd2TjfWnPZjUvnzhgT7yl0rU2tY3TC0mcQ9Y89ptju/RhuGQRpWmYJxJ49Nev1vN3XZnl/7yu6134QgGuhYXAUrIgEJzCijdoKTNThuMXwWpOX99UKOZayX1pEcYBYsciOJ7DUbohpP7kNAAAAASIDtY/yIbxePAffNDGxauSCktMt6Jo7T7daHShPgN7zqCjCjE6n2ivNFFq5UVbPigqNptfm1FM8bzv8Z4e5sIA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">103</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">106</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B2C2209E-BDF2-48F6-92A2-CD4706A919DA}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{68D54E11-6E9F-45E8-99F9-089F52999C76}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -328,7 +328,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Path=C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\201-300_para_XML.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;RetainSameConnection=False</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Path=C:\Users\joalg\Documents\Progra2DB2_SQL\ProyectoDB2_2\XmlConverter\File.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;RetainSameConnection=False</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -357,21 +357,6 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">1</SSIS:Property>
-                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
-                  </SSIS:Properties>
-                </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.Excel.Path">
-                  <SSIS:Properties>
-                    <SSIS:Property SSIS:Name="ID">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="CreationName">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="Description">
-                    </SSIS:Property>
-                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\201-300_para_XML.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

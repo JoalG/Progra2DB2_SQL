@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="103"
-  DTS:VersionGUID="{B2C2209E-BDF2-48F6-92A2-CD4706A919DA}">
+  DTS:VersionBuild="108"
+  DTS:VersionGUID="{EEE65BBB-49E5-4CC8-B6DA-3E0EF1CDDA61}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -41,9 +41,11 @@
       DTS:CreationName="ZS-EXCEL"
       DTS:DTSID="{3524406D-AC1C-4E2C-B603-E274573110E8}"
       DTS:ObjectName="Excel">
+      <DTS:PropertyExpression
+        DTS:Name="Path">@[User::varConverterFilePath]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <ConnectionManager
-          ConnectionString="Path=C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\201-300_para_XML.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;RetainSameConnection=False"
+          ConnectionString="Path=C:\Users\joalg\Documents\Progra2DB2_SQL\ProyectoDB2_2\XmlConverter\File.xlsx;ExcelVersion=Default;OutputBadDateAsNull=False;RetainSameConnection=False"
           ConnectByProxy="False" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -245,7 +247,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADIc8Y8UYMNXj6exLqNTr+BX9hPEoeGtbJhAkR3hwqY2gAAAAAOgAAAAAIAACAAAACjvGEvt6JiXRrwCJl4Nkpj0SX4v6kGY4C2mPx9uerrxSAAAAAvFPhALz0lG/RWXrHZhunXFlv2Mqi6a/I3MK5ysPCD50AAAAAF6EoSvV+je5bKJRb0S5+AITTbozWH7OZZRUH+1J7CHB8ablGGtp8CvGlcdAy59HJ5/EsLrrDOui7ORuOaq+ql</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAj2NQ1KV9XUCOUVmcE9n7NwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACOI7c3vImHJoCVNNrwLDwcyQLLFqyA8to/eUzGBDzOsQAAAAAOgAAAAAIAACAAAADXqfe8hTGOZ/zkTmceaGiTYEVWCGUIklqBQmvEUBmGvyAAAADcycssdll9a3URu7y0DKxDjzZHJ+GvkvjNRv4mjEgeY0AAAACorieQA+yepJIYkWbT9RamCVjiu4xxY5CTPPuCsfdvjc5GQuj7mrf2qTlGbj1N/GgRkVNu5M0yKyj+JByVzD/j</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -6274,7 +6276,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Datos XML que usa el adaptador de origen XML."
                   expressionType="Notify"
-                  name="XMLData">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\KK.xml</property>
+                  name="XMLData">C:\Users\joalg\Documents\Progra2DB2_SQL\ProyectoDB2_2\XmlConverter\Archived\XmlFile.xml</property>
                 <property
                   dataType="System.String"
                   description="Variable que usa el adaptador de origen XML para especificar datos XML."
@@ -6287,7 +6289,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   dataType="System.String"
                   description="Definición de esquema XML que usa el adaptador de origen XML."
                   expressionType="Notify"
-                  name="XMLSchemaDefinition">C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\KK.xsd</property>
+                  name="XMLSchemaDefinition">C:\Users\joalg\Documents\Progra2DB2_SQL\ProyectoDB2_2\XmlConverter\Archived\XmlFile.xsd</property>
                 <property
                   dataType="System.Boolean"
                   description="Identifica si se usará el esquema insertado."
@@ -6312,7 +6314,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Factura]"
                       dataType="ui4"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Factura]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Factura]"
@@ -6321,7 +6323,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Año]"
                       dataType="ui2"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Año]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Año]"
@@ -6330,7 +6332,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Mes]"
                       dataType="ui1"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Mes]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Mes]"
@@ -6339,7 +6341,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Dia]"
                       dataType="ui1"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Dia]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Dia]"
@@ -6348,7 +6350,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[AñoVencimiento]"
                       dataType="ui2"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[AñoVencimiento]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[AñoVencimiento]"
@@ -6357,7 +6359,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[MesVencimiento]"
                       dataType="ui1"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[MesVencimiento]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[MesVencimiento]"
@@ -6366,7 +6368,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[DiaVencimiento]"
                       dataType="ui1"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[DiaVencimiento]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[DiaVencimiento]"
@@ -6375,7 +6377,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Cliente]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Cliente]"
                       length="255"
@@ -6385,7 +6387,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Producto]"
                       dataType="ui2"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Producto]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Producto]"
@@ -6394,7 +6396,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Cantidad]"
                       dataType="ui2"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Cantidad]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Cantidad]"
@@ -6403,7 +6405,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Moneda]"
                       dataType="wstr"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Moneda]"
                       length="255"
@@ -6413,7 +6415,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Precio]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Precio]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Precio]"
@@ -6423,7 +6425,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Total]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Total]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Total]"
@@ -6433,7 +6435,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Almacén]"
                       dataType="ui1"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Almacén]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Almacén]"
@@ -6442,7 +6444,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Vendedor]"
                       dataType="i2"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Vendedor]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Vendedor]"
@@ -6451,7 +6453,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[TotalUSD]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[TotalUSD]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[TotalUSD]"
@@ -6461,7 +6463,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Impuesto]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Impuesto]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Impuesto]"
@@ -6471,7 +6473,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[ImpuestoUSD]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[ImpuestoUSD]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[ImpuestoUSD]"
@@ -6481,7 +6483,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[TipodeCambio]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[TipodeCambio]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[TipodeCambio]"
@@ -6491,7 +6493,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Ganacia]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[Ganacia]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[Ganacia]"
@@ -6501,7 +6503,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                     <outputColumn
                       refId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[GananciaUSD]"
                       dataType="decimal"
-                      errorOrTruncationOperation="Conversión"
+                      errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load Xml File\Origen XML.Outputs[Row].ExternalColumns[GananciaUSD]"
                       lineageId="Package\Load Xml File\Origen XML.Outputs[Row].Columns[GananciaUSD]"
@@ -11467,6 +11469,530 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </outputs>
                     </component>
                     <component
+                      refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1"
+                      componentClassID="Microsoft.ManagedComponentHost"
+                      contactInfo="Excel Source; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
+                      description="Excel Source can be used to read data from Excel files without installing any driver. It supports 32-bit and 64-bit both runtimes."
+                      name="Excel Source 1"
+                      usesDispositions="true"
+                      version="1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="LoggingMode determines how much information is logged during Package Execution. Set Logging mode to Debugging for maximum log."
+                          expressionType="Notify"
+                          name="LoggingMode"
+                          typeConverter="ZappySys.PowerPack.Common.LoggingMode">0</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="When you enable this property it will prefix timestamp before Log messages."
+                          expressionType="Notify"
+                          name="PrefixTimestamp">false</property>
+                        <property
+                          dataType="System.Null"
+                          expressionType="Notify"
+                          name="SelfRef"
+                          typeConverter="NOTBROWSABLE" />
+                        <property
+                          dataType="System.String"
+                          description="Sheet name or named range indicator from which you like to read data. You can use special table name indicators like [$first_sheet$] or [$1$], [$last_sheet$] or [$SomeNumber$]. For named range you can use NamedRange:NAME_FOR_RANGE"
+                          expressionType="Notify"
+                          name="TableName"
+                          typeConverter="ZappySys.PowerPack.Converters.TableEditor,ZappySys.PowerPack150.UI,Version=1.0.0.0,Culture=neutral,PublicKeyToken=1903265a93eae502">201-300</property>
+                        <property
+                          dataType="System.Int32"
+                          description="AccessMode"
+                          expressionType="Notify"
+                          name="AccessMode"
+                          typeConverter="ZappySys.Common.Data.SqlDataAccessMode">0</property>
+                        <property
+                          dataType="System.String"
+                          description="Query to read data. This option only used when AccessMode=Query"
+                          expressionType="Notify"
+                          name="Query"
+                          UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Maximum number of rows to fetch from source. 0=Unlimited"
+                          expressionType="Notify"
+                          name="MaxRows">0</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Output all columns as per excel formatting"
+                          expressionType="Notify"
+                          name="FormatAllColumns">false</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Total number of rows which needs to be skipped (After header)"
+                          expressionType="Notify"
+                          name="SkipRows">0</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Data has no header row to indicate column names"
+                          expressionType="Notify"
+                          name="Headerless">false</property>
+                        <property
+                          dataType="System.String"
+                          description="List of column(s) which needs to be formatted according to excel format. Multiple columns must be separated by vertical bar (e.g. BirthDate|Amount|Age) "
+                          expressionType="Notify"
+                          name="FormattedColumns"></property>
+                        <property
+                          dataType="System.String"
+                          description="Range start address for data read/write. Address must be excel cell address (e.g. A1)"
+                          expressionType="Notify"
+                          name="RangeStartCell"></property>
+                        <property
+                          dataType="System.String"
+                          description="Range end address for data read/write. Address must be excel cell address (e.g. A1)"
+                          expressionType="Notify"
+                          name="RangeEndCell"></property>
+                        <property
+                          dataType="System.Int32"
+                          description="Metadata scan mode controls how data type and length is determined. By default few records scanned to determine datatype/length. Changing ScanMode affects length/datatype accuracy."
+                          expressionType="Notify"
+                          name="MetaDataScanMode"
+                          typeConverter="ZappySys.Common.Data.MetaDataScanMode">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Length for all string column. This option is only valid for MetaDataScanMode=Custom"
+                          expressionType="Notify"
+                          name="MetaDataCustomLength">1000</property>
+                        <property
+                          dataType="System.String"
+                          name="UserComponentTypeName">ZappySys.ExcelSource</property>
+                      </properties>
+                      <connections>
+                        <connection
+                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Connections[ZS-EXCEL]"
+                          connectionManagerID="Package.ConnectionManagers[Excel]"
+                          connectionManagerRefId="Package.ConnectionManagers[Excel]"
+                          description="Excel connection for this component"
+                          name="ZS-EXCEL" />
+                      </connections>
+                      <outputs>
+                        <output
+                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput]"
+                          errorOrTruncationOperation="Error"
+                          errorRowDisposition="FailComponent"
+                          name="ExcelSourceOutput"
+                          truncationRowDisposition="FailComponent">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Factura]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Factura]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Factura]"
+                              name="Factura" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Año]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Año]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Año]"
+                              name="Año" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Mes]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Mes]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Mes]"
+                              name="Mes" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Dia]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Dia]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Dia]"
+                              name="Dia" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[AñoVencimiento]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]"
+                              name="AñoVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[MesVencimiento]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[MesVencimiento]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[MesVencimiento]"
+                              name="MesVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[DiaVencimiento]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]"
+                              name="DiaVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                              dataType="wstr"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                              length="255"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cliente]"
+                              name="Cliente" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Producto]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Producto]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Producto]"
+                              name="Producto" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cantidad]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Cantidad]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cantidad]"
+                              name="Cantidad"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Moneda]"
+                              dataType="wstr"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Moneda]"
+                              length="255"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Moneda]"
+                              name="Moneda" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Precio]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Precio]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Precio]"
+                              name="Precio"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Total]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Total]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Total]"
+                              name="Total"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Almacén]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Almacén]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Almacén]"
+                              name="Almacén" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Vendedor]"
+                              dataType="i4"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Vendedor]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Vendedor]"
+                              name="Vendedor" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[TotalUSD]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[TotalUSD]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[TotalUSD]"
+                              name="TotalUSD"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Impuesto]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Impuesto]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Impuesto]"
+                              name="Impuesto"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[ImpuestoUSD]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]"
+                              name="ImpuestoUSD"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Tipo de cambio]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]"
+                              name="Tipo de cambio"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Ganacia]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Ganacia]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Ganacia]"
+                              name="Ganacia"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[GananciaUSD]"
+                              dataType="numeric"
+                              externalMetadataColumnId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[GananciaUSD]"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[GananciaUSD]"
+                              name="GananciaUSD"
+                              precision="19"
+                              scale="5" />
+                          </outputColumns>
+                          <externalMetadataColumns
+                            isUsed="True">
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Factura]"
+                              dataType="i4"
+                              name="Factura" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Año]"
+                              dataType="i4"
+                              name="Año" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Mes]"
+                              dataType="i4"
+                              name="Mes" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Dia]"
+                              dataType="i4"
+                              name="Dia" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[AñoVencimiento]"
+                              dataType="i4"
+                              name="AñoVencimiento" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[MesVencimiento]"
+                              dataType="i4"
+                              name="MesVencimiento" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[DiaVencimiento]"
+                              dataType="i4"
+                              name="DiaVencimiento" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Cliente]"
+                              dataType="wstr"
+                              length="255"
+                              name="Cliente" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Producto]"
+                              dataType="i4"
+                              name="Producto" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Cantidad]"
+                              dataType="numeric"
+                              name="Cantidad"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Moneda]"
+                              dataType="wstr"
+                              length="255"
+                              name="Moneda" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Precio]"
+                              dataType="numeric"
+                              name="Precio"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Total]"
+                              dataType="numeric"
+                              name="Total"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Almacén]"
+                              dataType="i4"
+                              name="Almacén" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Vendedor]"
+                              dataType="i4"
+                              name="Vendedor" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[TotalUSD]"
+                              dataType="numeric"
+                              name="TotalUSD"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Impuesto]"
+                              dataType="numeric"
+                              name="Impuesto"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[ImpuestoUSD]"
+                              dataType="numeric"
+                              name="ImpuestoUSD"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Tipo de cambio]"
+                              dataType="numeric"
+                              name="Tipo de cambio"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[Ganacia]"
+                              dataType="numeric"
+                              name="Ganacia"
+                              precision="19"
+                              scale="5" />
+                            <externalMetadataColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].ExternalColumns[GananciaUSD]"
+                              dataType="numeric"
+                              name="GananciaUSD"
+                              precision="19"
+                              scale="5" />
+                          </externalMetadataColumns>
+                        </output>
+                        <output
+                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output]"
+                          isErrorOut="true"
+                          name="ExcelSource Error Output">
+                          <outputColumns>
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Factura]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Factura]"
+                              name="Factura" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Año]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Año]"
+                              name="Año" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Mes]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Mes]"
+                              name="Mes" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Dia]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Dia]"
+                              name="Dia" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[AñoVencimiento]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[AñoVencimiento]"
+                              name="AñoVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[MesVencimiento]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[MesVencimiento]"
+                              name="MesVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[DiaVencimiento]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[DiaVencimiento]"
+                              name="DiaVencimiento" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                              dataType="wstr"
+                              length="255"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Cliente]"
+                              name="Cliente" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Producto]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Producto]"
+                              name="Producto" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Cantidad]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Cantidad]"
+                              name="Cantidad"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Moneda]"
+                              dataType="wstr"
+                              length="255"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Moneda]"
+                              name="Moneda" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Precio]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Precio]"
+                              name="Precio"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Total]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Total]"
+                              name="Total"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Almacén]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Almacén]"
+                              name="Almacén" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Vendedor]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Vendedor]"
+                              name="Vendedor" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[TotalUSD]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[TotalUSD]"
+                              name="TotalUSD"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Impuesto]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Impuesto]"
+                              name="Impuesto"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ImpuestoUSD]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ImpuestoUSD]"
+                              name="ImpuestoUSD"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Tipo de cambio]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Tipo de cambio]"
+                              name="Tipo de cambio"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Ganacia]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[Ganacia]"
+                              name="Ganacia"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[GananciaUSD]"
+                              dataType="numeric"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[GananciaUSD]"
+                              name="GananciaUSD"
+                              precision="19"
+                              scale="5" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorCode]"
+                              name="ErrorCode"
+                              specialFlags="1" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                              dataType="i4"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorColumn]"
+                              name="ErrorColumn"
+                              specialFlags="2" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                              codePage="1252"
+                              dataType="str"
+                              length="128"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorColumnName]"
+                              name="ErrorColumnName" />
+                            <outputColumn
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                              dataType="wstr"
+                              length="1024"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSource Error Output].Columns[ErrorMessage]"
+                              name="ErrorMessage" />
+                          </outputColumns>
+                          <externalMetadataColumns />
+                        </output>
+                      </outputs>
+                    </component>
+                    <component
                       refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Trash Destination"
                       componentClassID="Microsoft.ManagedComponentHost"
                       contactInfo="Trash Destination; ZappySys LLC (c) All Rights Reserved; SSIS PowerPack; http://www.zappysys.com/support"
@@ -11596,7 +12122,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           expressionType="Notify"
                           name="LayoutInfo">&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;settings ver="3" format="Xml"&gt;
-  &lt;dataset id="dsFac487" main="True" rowelement="Row" inputid="487" readfrominput="True"&gt;&lt;/dataset&gt;
+  &lt;dataset id="dsFac142" main="True" rowelement="Row" inputid="142" readfrominput="True"&gt;&lt;/dataset&gt;
   &lt;map src="Factura" name="Factura" maptype="Element" /&gt;
   &lt;map src="Año" name="Año" maptype="Element" /&gt;
   &lt;map src="Mes" name="Mes" maptype="Element" /&gt;
@@ -11711,139 +12237,147 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       </properties>
                       <inputs>
                         <input
-                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1]"
-                          name="XmlInput1">
+                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2]"
+                          name="XmlInput2">
                           <properties>
                             <property
                               dataType="System.Int32"
                               description="Id for attached dataset with input. Use XML Layout Editor to see attached dataset"
                               expressionType="Notify"
-                              name="DatasetInputId">487</property>
+                              name="DatasetInputId">142</property>
                           </properties>
                           <inputColumns>
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Factura]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Factura]"
+                              cachedDataType="i4"
                               cachedName="Factura"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Factura]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Factura]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Año]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Año]"
+                              cachedDataType="i4"
                               cachedName="Año"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Año]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Año]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Mes]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Mes]"
+                              cachedDataType="i4"
                               cachedName="Mes"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Mes]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Mes]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Dia]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Dia]"
+                              cachedDataType="i4"
                               cachedName="Dia"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Dia]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Dia]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[AñoVencimiento]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[AñoVencimiento]"
+                              cachedDataType="i4"
                               cachedName="AñoVencimiento"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[AñoVencimiento]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[AñoVencimiento]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[MesVencimiento]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[MesVencimiento]"
+                              cachedDataType="i4"
                               cachedName="MesVencimiento"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[MesVencimiento]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[MesVencimiento]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[DiaVencimiento]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[DiaVencimiento]"
+                              cachedDataType="i4"
                               cachedName="DiaVencimiento"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[DiaVencimiento]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[DiaVencimiento]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Cliente]"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Cliente]"
                               cachedDataType="wstr"
                               cachedLength="255"
                               cachedName="Cliente"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Cliente]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cliente]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Producto]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Producto]"
+                              cachedDataType="i4"
                               cachedName="Producto"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Producto]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Producto]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Cantidad]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Cantidad]"
+                              cachedDataType="numeric"
                               cachedName="Cantidad"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Cantidad]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Cantidad]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Moneda]"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Moneda]"
                               cachedDataType="wstr"
                               cachedLength="255"
                               cachedName="Moneda"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Moneda]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Moneda]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Precio]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Precio]"
+                              cachedDataType="numeric"
                               cachedName="Precio"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Precio]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Precio]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Total]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Total]"
+                              cachedDataType="numeric"
                               cachedName="Total"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Total]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Total]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Almacén]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Almacén]"
+                              cachedDataType="i4"
                               cachedName="Almacén"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Almacén]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Almacén]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Vendedor]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Vendedor]"
+                              cachedDataType="i4"
                               cachedName="Vendedor"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Vendedor]" />
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Vendedor]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[TotalUSD]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[TotalUSD]"
+                              cachedDataType="numeric"
                               cachedName="TotalUSD"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[TotalUSD]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[TotalUSD]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Impuesto]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Impuesto]"
+                              cachedDataType="numeric"
                               cachedName="Impuesto"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Impuesto]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Impuesto]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[ImpuestoUSD]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[ImpuestoUSD]"
+                              cachedDataType="numeric"
                               cachedName="ImpuestoUSD"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[ImpuestoUSD]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[ImpuestoUSD]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Tipo de cambio]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Tipo de cambio]"
+                              cachedDataType="numeric"
                               cachedName="Tipo de cambio"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Tipo de cambio]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Tipo de cambio]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[Ganacia]"
-                              cachedDataType="wstr"
-                              cachedLength="255"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[Ganacia]"
+                              cachedDataType="numeric"
                               cachedName="Ganacia"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[Ganacia]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[Ganacia]" />
                             <inputColumn
-                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1].Columns[GananciaUSD]"
-                              cachedDataType="r8"
+                              refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2].Columns[GananciaUSD]"
+                              cachedDataType="numeric"
                               cachedName="GananciaUSD"
-                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output].Columns[GananciaUSD]" />
+                              cachedPrecision="19"
+                              cachedScale="5"
+                              lineageId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput].Columns[GananciaUSD]" />
                           </inputColumns>
                           <externalMetadataColumns />
                         </input>
                         <input
-                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2]"
-                          name="XmlInput2">
+                          refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1]"
+                          name="XmlInput1">
                           <externalMetadataColumns />
                         </input>
                       </inputs>
@@ -11867,10 +12401,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   </components>
                   <paths>
                     <path
-                      refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[Excel Source Output]"
-                      endId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput1]"
-                      name="Excel Source Output"
-                      startId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source.Outputs[Excel Source Output]" />
+                      refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[ExcelSourceOutput]"
+                      endId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform.Inputs[XmlInput2]"
+                      name="ExcelSourceOutput"
+                      startId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1.Outputs[ExcelSourceOutput]" />
                     <path
                       refId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[XmlGeneratorTransformOutput]"
                       endId="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Trash Destination.Inputs[TrashDestinationInput]"
@@ -11899,14 +12433,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Language="CSharp"
                   ReadOnlyVariables="User::DelayTimerInMs">
                   <ProjectItem
-                    Name="Properties\Settings.settings"
-                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                    Name="Properties\AssemblyInfo.cs"
+                    Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -12215,35 +12770,14 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
     }
 }]]></ProjectItem>
                   <ProjectItem
-                    Name="Properties\AssemblyInfo.cs"
-                    Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                    Name="Properties\Settings.settings"
+                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.Designer.cs"
                     Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -12480,36 +13014,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::DelayTimerInMs">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -12628,6 +13132,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
+
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -12788,34 +13321,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Settings.settings"
                 Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -13028,39 +13562,39 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
-<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
-<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
-<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
 <Objects
   Version="8">
-  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
   <Package
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138.666666666667,41.3333333333334"
+          Size="138.4,41.6"
           Id="Package\Load Txt File"
           TopLeft="456.138782951227,115.361346155714" />
         <NodeLayout
-          Size="141.333333333334,41.3333333333334"
+          Size="141.6,41.6"
           Id="Package\Load Xml File"
           TopLeft="812.244911791632,116.89075794187" />
         <NodeLayout
-          Size="142.666666666667,41.3333333333334"
+          Size="142.4,41.6"
           Id="Package\Load Xslx File"
           TopLeft="629.59184745658,115.798320951759" />
         <NodeLayout
-          Size="132,41.3333333333334"
+          Size="132,41.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Archive File"
           TopLeft="54.2000080892018,135.564708445559" />
         <NodeLayout
-          Size="134.666666666667,41.3333333333334"
+          Size="134.4,41.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File"
           TopLeft="56.8785661124305,37.2588247191043" />
         <NodeLayout
-          Size="125.333333333334,41.3333333333334"
+          Size="125.6,41.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Sleep (1s)"
           TopLeft="63.4857225330511,227.176475457254" />
         <EdgeLayout
@@ -13110,12 +13644,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="255.333333333334,324"
-          Size="255.333333333334,367.333333333334"
+          PanelSize="255.2,324"
+          Size="255.2,367.2"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File"
           TopLeft="34.3428691854287,29.1176498794227" />
         <NodeLayout
-          Size="125.333333333334,41.3333333333334"
+          Size="125.6,41.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Sleep (1s)"
           TopLeft="93.6285844807729,433.48235613714" />
         <EdgeLayout
@@ -13143,8 +13677,8 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="306.666666666667,530.666666666667"
-          Size="306.666666666667,573.333333333334"
+          PanelSize="306.4,530.4"
+          Size="306.4,573.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop"
           TopLeft="49.0476198828953,120.82353110627" />
       </GraphLayout>
@@ -13156,41 +13690,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Load Txt File\OLE DB Destination txt"
-          TopLeft="160.625002715471,827.482358704207" />
+          Size="150.4,41.6"
+          Id="Package\Load Txt File\Flat File Source"
+          TopLeft="175.35714640225,52.9558829919329" />
         <NodeLayout
           Size="178.4,41.6"
           Id="Package\Load Txt File\Formatear Fechas txt"
           TopLeft="164.375002978902,156.114708092542" />
         <NodeLayout
-          Size="188,41.6"
-          Id="Package\Load Txt File\Formatear Decimals txt"
-          TopLeft="156.428574092534,453.458826489432" />
-        <NodeLayout
-          Size="97.6,41.6"
-          Id="Package\Load Txt File\Sort"
-          TopLeft="205.48571759438,735.70588851965" />
-        <NodeLayout
           Size="216.8,41.6"
           Id="Package\Load Txt File\Data Conversion Decimals txt"
           TopLeft="149.285716828034,553.423534570352" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Load Txt File\Derived Column"
-          TopLeft="185.485717253782,643.694120414034" />
         <NodeLayout
           Size="207.2,41.6"
           Id="Package\Load Txt File\Data Conversion Fechas txt"
           TopLeft="143.571431016436,246.235297571004" />
         <NodeLayout
+          Size="186.4,41.6"
+          Id="Package\Load Txt File\OLE DB Destination txt"
+          TopLeft="160.625002715471,827.482358704207" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\Load Txt File\Sort"
+          TopLeft="205.48571759438,735.70588851965" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Load Txt File\Derived Column"
+          TopLeft="185.485717253782,643.694120414034" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Load Txt File\Formatear Decimals txt"
+          TopLeft="156.428574092534,453.458826489432" />
+        <NodeLayout
           Size="207.2,41.6"
           Id="Package\Load Txt File\Data Conversion BigInts txt"
           TopLeft="145.000002469335,346.411769564177" />
-        <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Load Txt File\Flat File Source"
-          TopLeft="175.35714640225,52.9558829919329" />
         <EdgeLayout
           Id="Package\Load Txt File.Paths[Sort Output]"
           TopLeft="254.055360154926,777.30588851965">
@@ -13210,7 +13744,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13232,7 +13768,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13278,7 +13816,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13300,7 +13840,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13322,7 +13864,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13344,7 +13888,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13391,31 +13937,53 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Load Xml File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="134,42.6666666666667"
+          Size="172,42.4"
+          Id="Package\Load Xml File\OLE DB Destination"
+          TopLeft="543.666665735344,89.6000007671118" />
+        <NodeLayout
+          Size="134.4,42.4"
           Id="Package\Load Xml File\Origen XML"
           TopLeft="217.166665735344,17.1000007671118" />
         <NodeLayout
-          Size="249.333333333334,42.6666666666667"
-          Id="Package\Load Xml File\Data Conversion BigInts and Strings"
-          TopLeft="391.666665735344,18.1000007671118" />
-        <NodeLayout
-          Size="184,42.6666666666667"
+          Size="184,42.4"
           Id="Package\Load Xml File\Derived Column Dates"
           TopLeft="691.666665735344,18.6000007671118" />
         <NodeLayout
-          Size="289.333333333334,42.6666666666667"
-          Id="Package\Load Xml File\Data Conversion Dates Decimals and Strings"
-          TopLeft="912.666665735344,20.1000007671118" />
-        <NodeLayout
-          Size="98.6666666666667,42.6666666666667"
+          Size="98.4,42.4"
           Id="Package\Load Xml File\Sort"
           TopLeft="756.166665735344,89.1000007671117" />
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Load Xml File\OLE DB Destination"
-          TopLeft="543.666665735344,89.6000007671118" />
+          Size="249.6,42.4"
+          Id="Package\Load Xml File\Data Conversion BigInts and Strings"
+          TopLeft="391.666665735344,18.1000007671118" />
+        <NodeLayout
+          Size="289.6,42.4"
+          Id="Package\Load Xml File\Data Conversion Dates Decimals and Strings"
+          TopLeft="912.666665735344,20.1000007671118" />
+        <EdgeLayout
+          Id="Package\Load Xml File.Paths[Sort Output]"
+          TopLeft="756.166665735344,110.683334100445">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-40.5,0"
+              Start="0,0"
+              End="-33,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-33,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Xml File.Paths[Row]"
           TopLeft="351.166665735344,38.9333341004451">
@@ -13435,29 +14003,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Xml File.Paths[Data Conversion Output]"
-          TopLeft="640.999999068677,40.1833341004451">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="50.6666666666666,0"
-              Start="0,0"
-              End="43.1666666666666,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="43.1666666666666,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="8.49999999999995,5,16,16"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -13517,19 +14065,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Xml File.Paths[Sort Output]"
-          TopLeft="756.166665735344,110.683334100445">
+          Id="Package\Load Xml File.Paths[Data Conversion Output]"
+          TopLeft="640.999999068677,40.1833341004451">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-40.5,0"
+              EndConnector="50.6666666666666,0"
               Start="0,0"
-              End="-33,0">
+              End="43.1666666666666,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-33,0" />
+                    End="43.1666666666666,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13547,37 +14095,41 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="192.8,41.6"
-          Id="Package\Load Xslx File\Formatear Decimals xslx"
-          TopLeft="72.589285230188,462.494112825872" />
+          Size="212.8,41.6"
+          Id="Package\Load Xslx File\Data Conversion Fechas xslx"
+          TopLeft="60,253.432350531481" />
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\Load Xslx File\Formatear Fechas xslx"
+          TopLeft="72,149" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\Load Xslx File\Data Conversion String xslx"
+          TopLeft="65.892857283125,653.594109823516" />
         <NodeLayout
           Size="221.6,41.6"
           Id="Package\Load Xslx File\Data Conversion Decimals xslx"
           TopLeft="61.6964288198449,559.114699699437" />
         <NodeLayout
-          Size="191.2,41.6"
-          Id="Package\Load Xslx File\OLE DB Destination xslx"
-          TopLeft="69.285714443849,837.235283434816" />
+          Size="139.2,42.4"
+          Id="Package\Load Xslx File\Excel Source"
+          TopLeft="87.410713854455,60" />
         <NodeLayout
           Size="106.4,41.6"
           Id="Package\Load Xslx File\Sort 1"
           TopLeft="116.517857007719,752.724501212261" />
         <NodeLayout
-          Size="212.8,41.6"
-          Id="Package\Load Xslx File\Data Conversion Fechas xslx"
-          TopLeft="60,253.432350531481" />
+          Size="191.2,41.6"
+          Id="Package\Load Xslx File\OLE DB Destination xslx"
+          TopLeft="69.285714443849,837.235283434816" />
         <NodeLayout
-          Size="139.2,42.4"
-          Id="Package\Load Xslx File\Excel Source"
-          TopLeft="87.410713854455,60" />
+          Size="192.8,41.6"
+          Id="Package\Load Xslx File\Formatear Decimals xslx"
+          TopLeft="72.589285230188,462.494112825872" />
         <NodeLayout
           Size="212.8,41.6"
           Id="Package\Load Xslx File\Data Conversion BigInts xslx"
           TopLeft="64.1071427275181,354.564701883858" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Load Xslx File\Data Conversion String xslx"
-          TopLeft="65.892857283125,653.594109823516" />
         <EdgeLayout
           Id="Package\Load Xslx File.Paths[Sort Output]"
           TopLeft="167.301785725784,794.324501212261">
@@ -13592,6 +14144,50 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,35.4107822225551" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Xslx File.Paths[Output 0]"
+          TopLeft="165.2,190.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.8323505314811"
+              Start="0,0"
+              End="0,55.3323505314811">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.3323505314811" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Xslx File.Paths[Excel Source Output]"
+          TopLeft="160.505356927228,102.4">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.5999999999999"
+              Start="0,0"
+              End="0,39.0999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.0999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13623,41 +14219,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Xslx File.Paths[Data Conversion Output]"
-          TopLeft="169.805357145422,695.194109823516">
+          Id="Package\Load Xslx File.Paths[Data Conversion Output3]"
+          TopLeft="168.453571363759,295.032350531481">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,57.5303913887453"
+              EndConnector="0,59.5323513523769"
               Start="0,0"
-              End="0,50.0303913887453">
+              End="0,52.0323513523769">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,50.0303913887453" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Xslx File.Paths[Data Conversion Output1]"
-          TopLeft="169.748213978853,396.164701883858">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.3294109420135"
-              Start="0,0"
-              End="0,58.8294109420135">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.8294109420135" />
+                    End="0,52.0323513523769" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13689,45 +14263,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Xslx File.Paths[Data Conversion Output3]"
-          TopLeft="168.453571363759,295.032350531481">
+          Id="Package\Load Xslx File.Paths[Data Conversion Output1]"
+          TopLeft="169.748213978853,396.164701883858">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.5323513523769"
+              EndConnector="0,66.3294109420135"
               Start="0,0"
-              End="0,52.0323513523769">
+              End="0,58.8294109420135">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.0323513523769" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\Load Xslx File\Formatear Fechas xslx"
-          TopLeft="72,149" />
-        <EdgeLayout
-          Id="Package\Load Xslx File.Paths[Excel Source Output]"
-          TopLeft="160.505356927228,102.4">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.5999999999999"
-              Start="0,0"
-              End="0,39.0999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.0999999999999" />
+                    End="0,58.8294109420135" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13737,19 +14285,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Xslx File.Paths[Output 0]"
-          TopLeft="165.2,190.6">
+          Id="Package\Load Xslx File.Paths[Data Conversion Output]"
+          TopLeft="169.805357145422,695.194109823516">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62.8323505314811"
+              EndConnector="0,57.5303913887453"
               Start="0,0"
-              End="0,55.3323505314811">
+              End="0,50.0303913887453">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.3323505314811" />
+                    End="0,50.0303913887453" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13767,7 +14315,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="201.6,42.4"
+          Size="200,41.6"
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\XML Generator Transform"
           TopLeft="119.874995576218,149.649999988377" />
         <NodeLayout
@@ -13780,18 +14328,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           TopLeft="140.999991357327,271" />
         <EdgeLayout
           Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[XmlGeneratorTransformOutput]"
-          TopLeft="221.437493466772,192.049999988377">
+          TopLeft="221.037493466773,191.249999988377">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78.9500000116229"
+              EndConnector="0,79.750000011623"
               Start="0,0"
-              End="0,71.4500000116229">
+              End="0,72.250000011623">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,71.4500000116229" />
+                    End="0,72.250000011623" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13800,20 +14348,36 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File\Excel Source 1"
+          TopLeft="522,97" />
         <EdgeLayout
-          Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[Excel Source Output]"
-          TopLeft="220.151784536353,87.658825213191">
+          Id="Package\Xlsx to Xml Converter - Infinite Loop\Foreach Xlsx File\Convert File.Paths[ExcelSourceOutput]"
+          TopLeft="522,117.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,61.9911747751861"
+              EndConnector="-202.125004423782,52.649999988377"
               Start="0,0"
-              End="0,54.4911747751861">
+              End="-194.625004423782,52.649999988377">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.4911747751861" />
+                    End="-97.062502211891,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.062502211891,0"
+                    Point2="-101.062502211891,0"
+                    Point3="-101.062502211891,4" />
+                  <mssgle:LineSegment
+                    End="-101.062502211891,48.649999988377" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-101.062502211891,48.649999988377"
+                    Point2="-101.062502211891,52.649999988377"
+                    Point3="-105.062502211891,52.649999988377" />
+                  <mssgle:LineSegment
+                    End="-194.625004423782,52.649999988377" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
