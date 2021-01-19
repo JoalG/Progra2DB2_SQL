@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="147"
-  DTS:VersionGUID="{1050D434-A593-40AA-8B29-D3543C0EC9FA}">
+  DTS:VersionBuild="153"
+  DTS:VersionGUID="{416852D0-AE41-4050-9F25-A53AFF6E53F4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -58,7 +58,7 @@
       DTS:ObjectName="Excel Clientes">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\DATOS_MAESTROS.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\_dotlrn-fs.Projects_\DATOS_MAESTROS.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -261,7 +261,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADw8hvSV/P68ziGyiIXVbSLtZCkBLpT9Fivbq/2Jx19JAAAAAAOgAAAAAIAACAAAADnMBjmW9sKN2PmPm2B2UdscCpY8EXZhzbXdcsZWtRARiAAAAALpZtrrG8l4ERGyRy/Co6gMkwNUxDWagRF+/Rmow+P3EAAAACFiBROM3emIZ84We4qXm4G/xM5oaANygvLzaNpnCr3nXsuYd7PGAnZve3Y8sZtDkGYVr0ri/MqKtB059vnmMp4</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAQ/6elux2WsBmEjEnkuVdHyNJjkskNMNIfvdv3tCokkgAAAAAOgAAAAAIAACAAAAAZkY8epdHA2txe0yOcaH9F5PoSOX/I3GQa4YCvx8krgSAAAACLr3MwVlASH4TB/nZBsq+V0bEtiGG7WcQCJmmLdyMv9EAAAACvxnhZ7k1lJOiXcnkbIptMdRW0GloRr/fu4fngbFNJEkA6O+F+3QJOfmOjjpGtMIAk8Ei93YBjhUxRQ5o5Wx2J</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -459,7 +459,6 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{193D8FFB-7C99-4FE1-A85C-CBDBA44FF07E}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -511,7 +510,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copia de Código SN]"
                       name="Copia de Código SN"
                       truncationRowDisposition="FailComponent">
@@ -533,7 +532,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="50"
+                      length="255"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copia de Destinatario de factura: País]"
                       name="Copia de Destinatario de factura: País"
                       truncationRowDisposition="FailComponent">
@@ -828,7 +827,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copia de Código SN]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="Copia de Código SN"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Codigo]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copia de Código SN]" />
@@ -836,7 +835,7 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copia de Destinatario de factura: País]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="Copia de Destinatario de factura: País"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
                       lineageId="Package\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Copia de Destinatario de factura: País]" />
@@ -847,14 +846,18 @@
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Codigo]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Codigo" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Pais]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Pais" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Clientes]"
+                      dataType="i4"
+                      name="ID_Clientes" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1093,7 +1096,7 @@
                             </outputColumn>
                             <outputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
@@ -1113,7 +1116,7 @@
                             </outputColumn>
                             <outputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Almacen]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Almacen]"
@@ -1232,6 +1235,20 @@
                               cachedLength="50"
                               cachedName="GananciaUSD"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[GananciaUSD]" />
+                            <inputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Inputs[Data Conversion Input].Columns[Cliente]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Cliente"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Cliente]" />
+                            <inputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Inputs[Data Conversion Input].Columns[Moneda]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="50"
+                              cachedName="Moneda"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]" />
                           </inputColumns>
                           <externalMetadataColumns />
                         </input>
@@ -1369,6 +1386,50 @@
                                   dataType="System.Int32"
                                   description="Specifies the input column used as the source of data for the conversion."
                                   name="SourceInputColumnLineageID">#{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[GananciaUSD]}</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Cliente]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              length="255"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Cliente]"
+                              name="Converted_Cliente"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Specifies the input column used as the source of data for the conversion."
+                                  name="SourceInputColumnLineageID">#{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Cliente]}</property>
+                                <property
+                                  dataType="System.Boolean"
+                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                                  name="FastParse">false</property>
+                              </properties>
+                            </outputColumn>
+                            <outputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]"
+                              codePage="1252"
+                              dataType="str"
+                              errorOrTruncationOperation="Conversion"
+                              errorRowDisposition="FailComponent"
+                              length="255"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]"
+                              name="Converted_Moneda"
+                              truncationRowDisposition="FailComponent">
+                              <properties>
+                                <property
+                                  containsID="true"
+                                  dataType="System.Int32"
+                                  description="Specifies the input column used as the source of data for the conversion."
+                                  name="SourceInputColumnLineageID">#{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]}</property>
                                 <property
                                   dataType="System.Boolean"
                                   description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -1521,7 +1582,7 @@
                           <inputColumns>
                             <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Derived Column DB Changes.Inputs[Derived Column Input].Columns[Converted_Cantidad]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Cantidad"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Cantidad]" />
                             <inputColumn
@@ -1532,14 +1593,14 @@
                               cachedScale="4"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Total]" />
                             <inputColumn
-                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Derived Column DB Changes.Inputs[Derived Column Input].Columns[Moneda]"
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Derived Column DB Changes.Inputs[Derived Column Input].Columns[Converted_Moneda]"
                               cachedCodepage="1252"
                               cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Moneda"
+                              cachedLength="255"
+                              cachedName="Converted_Moneda"
                               errorOrTruncationOperation="Computation"
                               errorRowDisposition="FailComponent"
-                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]"
                               truncationRowDisposition="FailComponent"
                               usageType="readWrite">
                               <properties>
@@ -1547,13 +1608,13 @@
                                   containsID="true"
                                   dataType="System.String"
                                   description="Derived Column Expression"
-                                  name="Expression">(#{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]} == "") ? "CRC" : #{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]}</property>
+                                  name="Expression">(#{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]} == "") ? "CRC" : #{Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]}</property>
                                 <property
                                   containsID="true"
                                   dataType="System.String"
                                   description="Derived Column Friendly Expression"
                                   expressionType="Notify"
-                                  name="FriendlyExpression">(Moneda == "") ? "CRC" : Moneda</property>
+                                  name="FriendlyExpression">(Converted_Moneda == "") ? "CRC" : Converted_Moneda</property>
                               </properties>
                             </inputColumn>
                           </inputColumns>
@@ -3400,12 +3461,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Vendedor]" />
                             <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Formatear Decimals txt.Inputs[Input 0].Columns[Converted_Almacen]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Almacen"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Almacen]" />
                             <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Formatear Decimals txt.Inputs[Input 0].Columns[Converted_Cantidad]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Cantidad"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Cantidad]" />
                             <inputColumn
@@ -4855,22 +4916,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                           name="OLE DB Destination Input">
                           <inputColumns>
                             <inputColumn
-                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Cliente]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Cliente"
-                              externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
-                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Cliente]" />
-                            <inputColumn
-                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Moneda]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="Moneda"
-                              externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
-                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Flat File Source.Outputs[Flat File Source Output].Columns[Moneda]" />
-                            <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Converted_Factura]"
                               cachedDataType="i8"
                               cachedName="Converted_Factura"
@@ -4896,7 +4941,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Producto]" />
                             <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Converted_Cantidad]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Cantidad"
                               externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Cantidad]" />
@@ -4918,7 +4963,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Total]" />
                             <inputColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Converted_Almacen]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Almacen"
                               externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion BigInts txt.Outputs[Data Conversion Output].Columns[Converted_Almacen]" />
@@ -4968,6 +5013,22 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               cachedScale="4"
                               externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[GananciaUSD]"
                               lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_GananciaUSD]" />
+                            <inputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Converted_Moneda]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="255"
+                              cachedName="Converted_Moneda"
+                              externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Moneda]" />
+                            <inputColumn
+                              refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].Columns[Converted_Cliente]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="255"
+                              cachedName="Converted_Cliente"
+                              externalMetadataColumnId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
+                              lineageId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt.Outputs[Data Conversion Output].Columns[Converted_Cliente]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -4987,7 +5048,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Cliente" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Producto]"
@@ -4995,13 +5056,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               name="Producto" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Cantidad" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Moneda" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Precio]"
@@ -5017,7 +5078,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Almacen" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[Vendedor]"
@@ -5055,7 +5116,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt.Inputs[OLE DB Destination Input].ExternalColumns[ID_Venta]"
-                              dataType="i4"
+                              dataType="i8"
                               name="ID_Venta" />
                           </externalMetadataColumns>
                         </input>
@@ -5145,14 +5206,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                   Language="CSharp"
                   ReadOnlyVariables="User::DelayTimerInMs">
                   <ProjectItem
-                    Name="Properties\Settings.settings"
-                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                    Name="Properties\AssemblyInfo.cs"
+                    Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -5461,35 +5543,14 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
     }
 }]]></ProjectItem>
                   <ProjectItem
-                    Name="Properties\AssemblyInfo.cs"
-                    Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                    Name="Properties\Settings.settings"
+                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.Designer.cs"
                     Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -5726,36 +5787,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::DelayTimerInMs">
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -5874,6 +5905,35 @@ using System.Runtime.CompilerServices;
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
+              <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
+
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
               <ProjectItem
                 Name="ScriptMain.cs"
                 Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -6031,34 +6091,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="ST_38c6ff899b57410fa308359aa746ae78.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{0d0fe370-7999-4ed0-a45e-c26e889297c8}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_bdca5bc0fa2a45a181c1a194ba54c548</RootNamespace><AssemblyName>ST_38c6ff899b57410fa308359aa746ae78</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
@@ -6351,114 +6412,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   version="1">
                   <components>
                     <component
-                      refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion"
-                      componentClassID="Microsoft.DataConvert"
-                      contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-                      description="Data Conversion"
-                      name="Data Conversion"
-                      usesDispositions="true">
-                      <inputs>
-                        <input
-                          refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input]"
-                          name="Data Conversion Input">
-                          <inputColumns>
-                            <inputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input].Columns[Converted_Moneda]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="255"
-                              cachedName="Converted_Moneda"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Moneda]" />
-                            <inputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input].Columns[Converted_Cliente]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="255"
-                              cachedName="Converted_Cliente"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Cliente]" />
-                          </inputColumns>
-                          <externalMetadataColumns />
-                        </input>
-                      </inputs>
-                      <outputs>
-                        <output
-                          refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output]"
-                          exclusionGroup="1"
-                          name="Data Conversion Output"
-                          synchronousInputId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Moneda]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              length="50"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Moneda]"
-                              name="ConvertedSize_Moneda"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  containsID="true"
-                                  dataType="System.Int32"
-                                  description="Specifies the input column used as the source of data for the conversion."
-                                  name="SourceInputColumnLineageID">#{Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Moneda]}</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                              </properties>
-                            </outputColumn>
-                            <outputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Cliente]"
-                              codePage="1252"
-                              dataType="str"
-                              errorOrTruncationOperation="Conversion"
-                              errorRowDisposition="FailComponent"
-                              length="50"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Cliente]"
-                              name="ConvertedSize_Cliente"
-                              truncationRowDisposition="FailComponent">
-                              <properties>
-                                <property
-                                  containsID="true"
-                                  dataType="System.Int32"
-                                  description="Specifies the input column used as the source of data for the conversion."
-                                  name="SourceInputColumnLineageID">#{Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Cliente]}</property>
-                                <property
-                                  dataType="System.Boolean"
-                                  description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                                  name="FastParse">false</property>
-                              </properties>
-                            </outputColumn>
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                        <output
-                          refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Error Output]"
-                          exclusionGroup="1"
-                          isErrorOut="true"
-                          name="Data Conversion Error Output"
-                          synchronousInputId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input]">
-                          <outputColumns>
-                            <outputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                              dataType="i4"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                              name="ErrorCode"
-                              specialFlags="1" />
-                            <outputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                              dataType="i4"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                              name="ErrorColumn"
-                              specialFlags="2" />
-                          </outputColumns>
-                          <externalMetadataColumns />
-                        </output>
-                      </outputs>
-                    </component>
-                    <component
                       refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx"
                       componentClassID="Microsoft.DataConvert"
                       contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -6552,7 +6505,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                             </outputColumn>
                             <outputColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
@@ -6572,7 +6525,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                             </outputColumn>
                             <outputColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Almacén]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Almacén]"
@@ -8852,7 +8805,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Producto]" />
                             <inputColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[Converted_Cantidad]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Cantidad"
                               externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Cantidad]" />
@@ -8872,7 +8825,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Formatear Decimals xslx.Outputs[Derived Column Output].Columns[Derived_Total]" />
                             <inputColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[Converted_Almacén]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Almacén"
                               externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx.Outputs[Data Conversion Output].Columns[Converted_Almacén]" />
@@ -8920,21 +8873,21 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[GananciaUSD]"
                               lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion Decimals xslx.Outputs[Data Conversion Output].Columns[Converted_GananciaUSD]" />
                             <inputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[ConvertedSize_Moneda]"
+                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[Converted_Cliente]"
                               cachedCodepage="1252"
                               cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="ConvertedSize_Moneda"
-                              externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Moneda]" />
-                            <inputColumn
-                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[ConvertedSize_Cliente]"
-                              cachedCodepage="1252"
-                              cachedDataType="str"
-                              cachedLength="50"
-                              cachedName="ConvertedSize_Cliente"
+                              cachedLength="255"
+                              cachedName="Converted_Cliente"
                               externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
-                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output].Columns[ConvertedSize_Cliente]" />
+                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Cliente]" />
+                            <inputColumn
+                              refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].Columns[Converted_Moneda]"
+                              cachedCodepage="1252"
+                              cachedDataType="str"
+                              cachedLength="255"
+                              cachedName="Converted_Moneda"
+                              externalMetadataColumnId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
+                              lineageId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output].Columns[Converted_Moneda]" />
                           </inputColumns>
                           <externalMetadataColumns
                             isUsed="True">
@@ -8954,7 +8907,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Cliente" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Producto]"
@@ -8962,13 +8915,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               name="Producto" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Cantidad" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Moneda" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Precio]"
@@ -8984,7 +8937,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Almacen" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[Vendedor]"
@@ -9022,7 +8975,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input].ExternalColumns[ID_Venta]"
-                              dataType="i4"
+                              dataType="i8"
                               name="ID_Venta" />
                           </externalMetadataColumns>
                         </input>
@@ -9075,18 +9028,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
                       name="Data Conversion Output"
                       startId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion String xslx.Outputs[Data Conversion Output]" />
                     <path
-                      refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Data Conversion Output4]"
-                      endId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input]"
-                      name="Data Conversion Output"
-                      startId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Outputs[Data Conversion Output]" />
-                    <path
                       refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Derived Column Output]"
                       endId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion Decimals xslx.Inputs[Data Conversion Input]"
                       name="Derived Column Output"
                       startId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Formatear Decimals xslx.Outputs[Derived Column Output]" />
                     <path
                       refId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Derived Column Output1]"
-                      endId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion.Inputs[Data Conversion Input]"
+                      endId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx.Inputs[OLE DB Destination Input]"
                       name="Derived Column Output"
                       startId="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Derived Column.Outputs[Derived Column Output]" />
                     <path
@@ -9244,35 +9192,34 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=]]></arrayElement>
   </resheader>
 </root>]]></ProjectItem>
                   <ProjectItem
-                    Name="Properties\AssemblyInfo.cs"
-                    Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
+                    Name="Properties\Settings.Designer.cs"
+                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
 
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
 
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
                   <ProjectItem
                     Name="ScriptMain.cs"
                     Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -9430,34 +9377,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
                   <ProjectItem
-                    Name="Properties\Settings.Designer.cs"
-                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
+                    Name="Properties\AssemblyInfo.cs"
+                    Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
 //
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Settings.settings"
                     Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
@@ -9703,6 +9651,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::DelayTimerInMs">
               <ProjectItem
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -9821,35 +9778,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.Designer.cs"
-                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
               <ProjectItem
                 Name="ST_58b60a85b1a8453f974f49b4086fb902.csproj"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{0d0fe370-7999-4ed0-a45e-c26e889297c8}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_bdca5bc0fa2a45a181c1a194ba54c548</RootNamespace><AssemblyName>ST_58b60a85b1a8453f974f49b4086fb902</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
@@ -10010,6 +9938,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
               <ProjectItem
+                Name="Properties\Settings.Designer.cs"
+                Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
+
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+              <ProjectItem
                 Name="Properties\AssemblyInfo.cs"
                 Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -10039,15 +9996,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-              <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -11789,6 +11737,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   Language="CSharp"
                   ReadOnlyVariables="User::DelayTimerInMs">
                   <ProjectItem
+                    Name="Properties\Settings.settings"
+                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+                  <ProjectItem
                     Name="Properties\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -11907,35 +11864,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
 </root>]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.Designer.cs"
-                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
                   <ProjectItem
                     Name="ST_d1f969b02f7d42aa869ab8d5ba2c8100.csproj"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{0d0fe370-7999-4ed0-a45e-c26e889297c8}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_bdca5bc0fa2a45a181c1a194ba54c548</RootNamespace><AssemblyName>ST_d1f969b02f7d42aa869ab8d5ba2c8100</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
@@ -12096,6 +12024,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
                   <ProjectItem
+                    Name="Properties\Settings.Designer.cs"
+                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
+
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+                  <ProjectItem
                     Name="Properties\AssemblyInfo.cs"
                     Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -12125,15 +12082,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.settings"
-                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.Designer.cs"
                     Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -12370,14 +12318,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::DelayTimerInMs">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -12686,35 +12655,14 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
     }
 }]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -13116,7 +13064,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                             </outputColumn>
                             <outputColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Cantidad]"
@@ -13136,7 +13084,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                             </outputColumn>
                             <outputColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Almacén]"
-                              dataType="i8"
+                              dataType="i4"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Almacén]"
@@ -13628,7 +13576,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="str"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              length="50"
+                              length="255"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion Dates Decimals and Strings.Outputs[Data Conversion Output].Columns[Converted_Cliente]"
                               name="Converted_Cliente"
                               truncationRowDisposition="FailComponent">
@@ -13650,7 +13598,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               dataType="str"
                               errorOrTruncationOperation="Conversion"
                               errorRowDisposition="FailComponent"
-                              length="50"
+                              length="255"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion Dates Decimals and Strings.Outputs[Data Conversion Output].Columns[Converted_Moneda]"
                               name="Converted_Moneda"
                               truncationRowDisposition="FailComponent">
@@ -13974,7 +13922,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Converted_Cliente]"
                               cachedCodepage="1252"
                               cachedDataType="str"
-                              cachedLength="50"
+                              cachedLength="255"
                               cachedName="Converted_Cliente"
                               externalMetadataColumnId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion Dates Decimals and Strings.Outputs[Data Conversion Output].Columns[Converted_Cliente]" />
@@ -13986,7 +13934,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Producto]" />
                             <inputColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Converted_Cantidad]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Cantidad"
                               externalMetadataColumnId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Cantidad]" />
@@ -13994,7 +13942,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Converted_Moneda]"
                               cachedCodepage="1252"
                               cachedDataType="str"
-                              cachedLength="50"
+                              cachedLength="255"
                               cachedName="Converted_Moneda"
                               externalMetadataColumnId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion Dates Decimals and Strings.Outputs[Data Conversion Output].Columns[Converted_Moneda]" />
@@ -14016,7 +13964,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion Dates Decimals and Strings.Outputs[Data Conversion Output].Columns[Converted_Total]" />
                             <inputColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Converted_Almacén]"
-                              cachedDataType="i8"
+                              cachedDataType="i4"
                               cachedName="Converted_Almacén"
                               externalMetadataColumnId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
                               lineageId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\Data Conversion BigInts and Strings.Outputs[Data Conversion Output].Columns[Converted_Almacén]" />
@@ -14085,7 +14033,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cliente]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Cliente" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Producto]"
@@ -14093,13 +14041,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               name="Producto" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Cantidad]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Cantidad" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Moneda]"
                               codePage="1252"
                               dataType="str"
-                              length="50"
+                              length="255"
                               name="Moneda" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Precio]"
@@ -14115,7 +14063,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Almacen]"
-                              dataType="i8"
+                              dataType="i4"
                               name="Almacen" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Vendedor]"
@@ -14153,7 +14101,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                               scale="4" />
                             <externalMetadataColumn
                               refId="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID_Venta]"
-                              dataType="i4"
+                              dataType="i8"
                               name="ID_Venta" />
                           </externalMetadataColumns>
                         </input>
@@ -14943,6 +14891,15 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   Language="CSharp"
                   ReadOnlyVariables="User::DelayTimerInMs">
                   <ProjectItem
+                    Name="Properties\Settings.settings"
+                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
+                  <ProjectItem
                     Name="Properties\Resources.resx"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
 <root>
@@ -15064,35 +15021,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
                   <ProjectItem
                     Name="ST_6dca5d499416448281de4cae21b409e4.csproj"
                     Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?><Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"><PropertyGroup><ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids><Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration><Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform><ProductVersion>8.0.30703</ProductVersion><SchemaVersion>2.0</SchemaVersion><ProjectGuid>{0d0fe370-7999-4ed0-a45e-c26e889297c8}</ProjectGuid><OutputType>Library</OutputType><AppDesignerFolder>Properties</AppDesignerFolder><RootNamespace>ST_bdca5bc0fa2a45a181c1a194ba54c548</RootNamespace><AssemblyName>ST_6dca5d499416448281de4cae21b409e4</AssemblyName><TargetFrameworkVersion>v4.7</TargetFrameworkVersion><FileAlignment>512</FileAlignment><ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch><TargetFrameworkProfile></TargetFrameworkProfile></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Debug' "><DebugSymbols>true</DebugSymbols><DebugType>full</DebugType><Optimize>false</Optimize><OutputPath>.\bin\Debug\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>DEBUG;TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><PropertyGroup Condition=" '$(Configuration)' == 'Release' "><DebugSymbols>false</DebugSymbols><Optimize>true</Optimize><OutputPath>.\bin\Release\</OutputPath><EnableUnmanagedDebugging>false</EnableUnmanagedDebugging><DefineConstants>TRACE</DefineConstants><ErrorReport>prompt</ErrorReport><WarningLevel>4</WarningLevel></PropertyGroup><ItemGroup><Reference Include="System" /><Reference Include="System.Data" /><Reference Include="System.Windows.Forms" /><Reference Include="System.Xml" /><Reference Include="Microsoft.SqlServer.ManagedDTS, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /><Reference Include="Microsoft.SqlServer.ScriptTask, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" /></ItemGroup><ItemGroup><AppDesigner Include="Properties\" /><Compile Include="Properties\AssemblyInfo.cs"><SubType>Code</SubType></Compile><EmbeddedResource Include="Properties\Resources.resx"><Generator>ResXFileCodeGenerator</Generator><LastGenOutput>Resources.Designer.cs</LastGenOutput></EmbeddedResource><Compile Include="Properties\Resources.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Resources.resx</DependentUpon></Compile><None Include="Properties\Settings.settings"><Generator>SettingsSingleFileGenerator</Generator><LastGenOutput>Settings.Designer.cs</LastGenOutput></None><Compile Include="Properties\Settings.Designer.cs"><AutoGen>True</AutoGen><DependentUpon>Settings.settings</DependentUpon></Compile><Compile Include="ScriptMain.cs"><SubType>Code</SubType></Compile></ItemGroup><!-- Include the build rules for a C# project.--><Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" /><ProjectExtensions><VisualStudio><FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}"><ProjectProperties HostName="ScriptTask" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" /><Host Name="ScriptTask" GeneratedNamespace="$safeprojectname" IconIndex=""></Host><ProjectClient><HostIdentifier>SSIS_ST150</HostIdentifier></ProjectClient></FlavorProperties></VisualStudio></ProjectExtensions></Project>]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.Designer.cs"
-                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
-    "ings")]
-
-namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}]]></ProjectItem>
                   <ProjectItem
                     Name="ScriptMain.cs"
                     Encoding="UTF8"><![CDATA[#region Help:  Introduction to the script task
@@ -15250,6 +15178,35 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548
   </msb:ItemGroup>
 </c:Project>]]></ProjectItem>
                   <ProjectItem
+                    Name="Properties\Settings.Designer.cs"
+                    Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Settings.get_Default():ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties.Sett" +
+    "ings")]
+
+namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}]]></ProjectItem>
+                  <ProjectItem
                     Name="Properties\AssemblyInfo.cs"
                     Encoding="UTF8"><![CDATA[using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -15279,15 +15236,6 @@ using System.Runtime.CompilerServices;
 // by using the '*' as shown below:
 
 [assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
-                  <ProjectItem
-                    Name="Properties\Settings.settings"
-                    Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
                   <ProjectItem
                     Name="Properties\Resources.Designer.cs"
                     Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -15524,14 +15472,35 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
               Language="CSharp"
               ReadOnlyVariables="User::DelayTimerInMs">
               <ProjectItem
-                Name="Properties\Settings.settings"
-                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
-<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
-</SettingsFile>]]></ProjectItem>
+                Name="Properties\AssemblyInfo.cs"
+                Encoding="UTF8"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.resx"
                 Encoding="UTF8"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
@@ -15840,35 +15809,14 @@ namespace ST_bdca5bc0fa2a45a181c1a194ba54c548.Properties {
     }
 }]]></ProjectItem>
               <ProjectItem
-                Name="Properties\AssemblyInfo.cs"
-                Encoding="UTF8"><![CDATA[using System.Reflection;
-using System.Runtime.CompilerServices;
-
-//
-// General Information about an assembly is controlled through the following 
-// set of attributes. Change these attribute values to modify the information
-// associated with an assembly.
-//
-[assembly: AssemblyTitle("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ST_bdca5bc0fa2a45a181c1a194ba54c548")]
-[assembly: AssemblyCopyright("Copyright @  2021")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-//
-// Version information for an assembly consists of the following four values:
-//
-//      Major Version
-//      Minor Version 
-//      Build Number
-//      Revision
-//
-// You can specify all the values or you can default the Revision and Build Numbers 
-// by using the '*' as shown below:
-
-[assembly: AssemblyVersion("1.0.*")]]]></ProjectItem>
+                Name="Properties\Settings.settings"
+                Encoding="UTF8"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></ProjectItem>
               <ProjectItem
                 Name="Properties\Resources.Designer.cs"
                 Encoding="UTF8"><![CDATA[//------------------------------------------------------------------------------
@@ -16083,6 +16031,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     <LayoutInfo>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42.6666666666667"
+          Id="Package\Data Flow Task"
+          TopLeft="1856.4166578191,250.74999819845" />
         <NodeLayout
           Size="162.666666666667,41.3333333333334"
           Id="Package\Execute SQL Task"
@@ -16471,18 +16423,104 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Size="306.666666666667,573.333333333334"
           Id="Package\Xml Loader - Infinite Loop"
           TopLeft="1379.91073508062,174.693137668702" />
-        <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Data Flow Task"
-          TopLeft="1856.4166578191,250.74999819845" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
+    design-time-name="Package\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Destination"
+          TopLeft="211.24999685213,185.33333007892" />
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task\Excel Source"
+          TopLeft="226.249996628612,22.7499995931983" />
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Data Flow Task\Data Conversion"
+          TopLeft="215.624996786937,105.299998117089" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Excel Source Output]"
+          TopLeft="295.104163374441,65.416666259865">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.8833318572243"
+              Start="0,0"
+              End="0,32.3833318572243">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.3833318572243" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="295.770830152867,147.966664783756">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.3666652951639"
+              Start="0,0"
+              End="0,29.8666652951639">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.8666652951639" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="178.666666666667,41.3333333333334"
           Id="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Formatear Fechas txt"
@@ -16490,7 +16528,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
         <NodeLayout
           Size="186.666666666667,41.3333333333334"
           Id="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\OLE DB Destination txt"
-          TopLeft="161.875002696844,722.832360575495" />
+          TopLeft="161.875002696844,723.374027232476" />
         <NodeLayout
           Size="216.666666666667,41.3333333333334"
           Id="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File\Data Conversion Decimals txt"
@@ -16534,9 +16572,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16558,33 +16594,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Txt Loader - Infinite Loop\Foreach Txt File\Load Txt File.Paths[Derived Column Output]"
-          TopLeft="256.201193574074,687.660787057455">
+          TopLeft="256.201193574073,687.660787057455">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.1715735180399"
+              EndConnector="0,35.7132401750213"
               Start="0,0"
-              End="0,27.6715735180399">
+              End="0,28.2132401750213">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.6715735180399" />
+                    End="0,28.2132401750213" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16606,9 +16638,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16630,9 +16660,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16654,9 +16682,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16678,9 +16704,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16703,7 +16727,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="212.666666666667,41.3333333333334"
           Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion BigInts xslx"
@@ -16737,13 +16761,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
           Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Formatear Fechas xslx"
           TopLeft="72,149" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\Data Conversion"
-          TopLeft="82.0000000000001,805.333333333333" />
-        <NodeLayout
           Size="193.333333333334,42.6666666666667"
           Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File\OLE DB Destination xslx"
-          TopLeft="69.535714443849,873.985283434816" />
+          TopLeft="68.535714443849,818.985283434816" />
         <EdgeLayout
           Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Data Conversion Output]"
           TopLeft="169.748213978853,396.164701883858">
@@ -16763,9 +16783,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16787,9 +16805,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16811,33 +16827,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Derived Column Output1]"
-          TopLeft="162.25,781">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,24.3333333333336"
-              Start="0,0"
-              End="0,16.8333333333336">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8333333333336" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16859,33 +16849,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Data Conversion Output4]"
-          TopLeft="163.434523888591,848">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,25.9852834348161"
-              Start="0,0"
-              End="0,18.4852834348161">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.4852834348161" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16907,9 +16871,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16931,9 +16893,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16955,9 +16915,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Xlsx Loader - Infinite Loop\Foreach Xlsx File\Load Xslx File.Paths[Derived Column Output1]"
+          TopLeft="164.517857221924,781">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.9852834348164"
+              Start="0,0"
+              End="0,30.4852834348164">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.4852834348164" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17090,7 +17070,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
     design-time-name="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination"
@@ -17130,9 +17110,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17154,9 +17132,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17178,9 +17154,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17202,9 +17176,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17212,96 +17184,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</BinaryItem>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Xml Loader - Infinite Loop\Foreach Xlml File\Load Xml File\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Data Flow Task">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="139.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task\Excel Source"
-          TopLeft="226.249996628612,22.7499995931983" />
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Data Flow Task\Data Conversion"
-          TopLeft="215.624996786937,105.299998117089" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Excel Source Output]"
-          TopLeft="295.104163374441,65.416666259865">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.8833318572243"
-              Start="0,0"
-              End="0,32.3833318572243">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.3833318572243" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="211.24999685213,185.33333007892" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Data Conversion Output]"
-          TopLeft="295.770830152867,147.966664783756">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.3666652951639"
-              Start="0,0"
-              End="0,29.8666652951639">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.8666652951639" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
