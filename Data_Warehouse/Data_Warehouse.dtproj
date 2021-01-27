@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">MSI</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAACAAAAAAAQZgAAAAEAACAAAADyslPOUhzgbaTfGdDzjzH/ZrmeyniXhqG7w5Zx3CHyfwAAAAAOgAAAAAIAACAAAABLdR9qGljPoOpjmNBnPdb4FWBYpuUa2yXDx2yw5VTaJJAAAABXtIW4qGIAjL8TJeNZok+uoEFalDLAXQ3wwmWJ6sSMernZ5ur8GUbPT1Vih0txBNWOML/jIOGitUv4q14uZ4PgcKwDhpZVBD/wkJrhRMldZOGTqWPj39WwGOnjBMT5sVqEV1h+Er5MLqju/iiMm8UEhDplsb4UM5P4kfT99cDe1sKgakrE+TQQtFrtht4X0mhAAAAAh5M6rJmCVgezrAYhNIg/JCF8FiAMeG8UEw5+ypQtt+vVRp86bNTyB4yE3OYfG9ugJ7BSWjgHqoAp4I/2UbrPGA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQXJC6snfjESuTf4zFNz79QAAAAACAAAAAAAQZgAAAAEAACAAAAA8FnxHATMjilCP/DkyawA6vKJlcjphkQinorYFcnGmiAAAAAAOgAAAAAIAACAAAACOH4wt0cCe0jaVPeofF5ZWAtLZu+CM1Qzc1NZtfQzGo5AAAADo5rou52ORcme3YFQKNRsaBgsj6Eh4BKJBUGJ9Ce52CHooWVhrKcjT0trKG/B/8Xz4JGH9mnq7+bGPdBkfdAYgQi1buR+1BA6lQbbYB0+EPnIRP2dcNytE319PFQNiXwQnXFZdK9NGexIe31DdaLSADnPzg0XcIKzBvVT0ORNrQUsKOU73zqxZETRCTfi5ZHRAAAAAXDjOXIQVENjnbCeGNAbrNdVnSIEVhBNVC0SU6upPeeJ2Cxc1YPwx9lbbz4/Tv71urWHN/mjtP50QLhAZ1GZL/w==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">Package</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">35</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">38</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{3F1F554D-60E0-403F-95A2-867DFEC544D4}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9C5F0219-0134-4AB6-9BA3-7BDA4C7FD5BB}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -78,7 +78,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=DESKTOP-SG9ETP1\SQL_MELANIA1;Initial Catalog=DataWarehouse_Progra2;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package-{62BB94FB-FFE7-412D-9643-E62076D15073}Source DataWarehouse;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=basesdatos2.database.windows.net;User ID=adminbd;Initial Catalog=DataWarehouse;Provider=MSOLEDBSQL.1;Auto Translate=False;Application Name=SSIS-Package-{62BB94FB-FFE7-412D-9643-E62076D15073}Source DataWarehouse;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -108,7 +108,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DataWarehouse_Progra2</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">DataWarehouse</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -152,7 +152,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">DESKTOP-SG9ETP1\SQL_MELANIA1</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">basesdatos2.database.windows.net</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -167,6 +167,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">adminbd</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>

@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\DTExec.exe" /file "C:\Users\USUARIO\OneDrive\4. TEC-CUARTO SEMESTRE\BASES II\Proyecto2\Progra2DB2_SQL\Data_Warehouse\Package.dtsx" 
